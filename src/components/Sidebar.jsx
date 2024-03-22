@@ -38,6 +38,9 @@ export const Sidebar = ({ children }) => {
   return (
     <div className="container">
       <div style={{ width: isOpen ? "600px" : "50px" }} className="sidebar">
+        <div className='flex justify-center text-7xl pt-16'>
+          Md Mehedi Hassan
+        </div>
         <div className="top_section">
           <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">Logo</h1>
           <div style={{ marginLeft: isOpen ? "450px" : "0px" }} className="bars">
