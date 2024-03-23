@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Sidebar } from "./components/Sidebar"
+import { Layout } from "./components/Layout"
 import { Home } from "./pages/Home"
 import { Experience } from "./pages/Experience"
 import { About } from "./pages/About"
@@ -9,14 +9,14 @@ import './App.css'
 export const App = () => {
   return (
     <BrowserRouter>
-      <Sidebar>
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/expericence" element={<Experience />} />
           <Route path="/project" element={<Projects />} />
         </Routes>
-      </Sidebar>
+      </Layout>
     </BrowserRouter>
   )
 }
