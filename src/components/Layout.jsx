@@ -97,7 +97,7 @@ export const Layout = ({ children }) => {
                   color: "#fff",
                   scale: location.pathname !== item.path && 1.2,
                   transform:
-                    location.pathname !== item.path && "translateX(5px)",
+                    location.pathname !== item.path && "translateX(10px)",
                   transition: { duration: 0.2 },
                 }}
               >
