@@ -1,13 +1,16 @@
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export const Layout = ({ children }) => {
-  // const [isOpen, setIsOpen] = useState(true);
-  // const toggle = () => setIsOpen(!isOpen);
+  const theme = resolveConfig(tailwindConfig);
+  const location = useLocation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
@@ -15,10 +18,10 @@ export const Layout = ({ children }) => {
   };
 
   useEffect(() => {
-    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -48,57 +51,64 @@ export const Layout = ({ children }) => {
     <div className="flex">
       <div
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100vh',
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent, #0f172a42 10%, #0f172a10 20%, #0f172a17 30%)`,
-          pointerEvents: 'none',
+          width: "100%",
+          height: "100vh",
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent, #0f172a22 10%, #0f172a08 20%, #0f172a0b 30%)`,
+          pointerEvents: "none",
         }}
       ></div>
-      <div className="bg-[#0F172A] text-white h-screen w-[600px] pl-10 flex flex-col justify-around">
-
-        {/* <div className="flex items-center py-[20px] px-[15px]">
-          <h1 style={{ display: isOpen ? "block" : "none" }} className="text-[30px]">Logo</h1>
-          <div style={{ marginLeft: isOpen ? "450px" : "0px" }} className="flex text-[25px] ml-[50px]">
-            <FaBars onClick={toggle} />
-          </div>
-        </div> */}
+      <div className="bg-primary text-white h-screen w-[600px] pl-10 flex flex-col justify-around">
         <div>
-          <div className="pb-4">
-            <h1 className="text-4xl pb-2">Md Mehedi Hassan</h1>
-            <p className="text-lg">Junior Front End Developer</p>
-            <p className="text-sm pt-4 text-[#94A3B8]">React developer with experience who specializes in creating responsive, dynamic websites. adept in Material UI, Tawilwind CSS, JavaScript, Typescript, and Redux. devoted to maximizing maintainability of code and user experience.</p>
-          </div>
+          <Header />
           {menuItem.map((item, index) => (
             <NavLink
               to={item.path}
               key={index}
-              className="flex items-center text-[#94A3B8] py-[10px] px-[15px] gap-[15px] transition-all duration-500 hover:text-[#fff]"
+              className="flex items-center hover:text-[#fff] text-[#94A3B8] py-[10px] px-[10px] gap-[15px] transition-all duration-500 "
             >
-              <div className="text=[20px]">{item.icon}</div>
-              <div className="text-[20px]">{item.name}</div>
+              <motion.div
+                animate={{
+                  color:
+                    location.pathname === item.path
+                      ? theme.theme.colors.secendary
+                      : "#94A3B8",
+                  fontSize: location.pathname === item.path ? "2rem" : "1.5rem",
+                }}
+              >
+                {item.icon}
+              </motion.div>
+              <motion.div
+                className="text-[1rem]"
+                animate={{
+                  color:
+                    location.pathname === item.path
+                      ? theme.theme.colors.secendary
+                      : "#94A3B8",
+                  transform:
+                    location.pathname === item.path
+                      ? "translateX(5px)"
+                      : "translateX(0px)",
+                  scale: location.pathname === item.path ? 1.2 : 1,
+                }}
+                whileHover={{
+                  color: "#fff",
+                  scale: location.pathname !== item.path && 1.2,
+                  transform:
+                    location.pathname !== item.path && "translateX(10px)",
+                  transition: { duration: 0.2 },
+                }}
+              >
+                {item.name}
+              </motion.div>
             </NavLink>
           ))}
         </div>
-        <div className="flex gap-5 ">
-          <a href="https://github.com/mehedihassandev" target="_blank" rel="noreferrer" className="text-2xl">
-            <FaGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/mdmehedihassandev/" target="_blank" rel="noreferrer" className="text-2xl">
-            <FaLinkedinIn />
-          </a>
-          <a href="#" target="_blank" rel="noreferrer" className="text-2xl">
-            <FaInstagram />
-          </a>
-          <a href="#" target="_blank" rel="noreferrer" className="text-2xl">
-            <FaXTwitter />
-          </a>
-
-        </div>
+        <Footer />
       </div>
-      <main className="w-full p-[20px] bg-[#0F172A]">{children}</main>
+      <main className="w-full p-[20px] bg-primary">{children}</main>
     </div>
   );
 };
