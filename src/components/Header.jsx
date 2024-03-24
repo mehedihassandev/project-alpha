@@ -8,6 +8,7 @@ export const Header = () => {
       <motion.p
         whileHover={{
           color: "#fff",
+          scale: 1.05,
         }}
         className="text-[0.9rem] leading-6 pt-4 text-[#94A3B8]"
       >
