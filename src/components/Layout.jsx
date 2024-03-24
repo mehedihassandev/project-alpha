@@ -38,7 +38,7 @@ export const Layout = ({ children }) => {
     },
     {
       path: "/expericence",
-      name: "Expericence",
+      name: "Education & Expericence",
       icon: <MdOutlineHorizontalRule />,
     },
     {
@@ -108,7 +108,7 @@ export const Layout = ({ children }) => {
         </div>
         <Footer />
       </div>
-      <main className="w-full p-[20px] bg-primary">{children}</main>
+      <main className="w-full h-screen bg-primary">{children}</main>
     </div>
   );
 };
