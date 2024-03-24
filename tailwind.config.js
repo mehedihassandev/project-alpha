@@ -7,6 +7,7 @@ export default {
         primary: "#12171D",
         secendary: "#FFFF00",
         tsecendary: "#94A3B8",
+        buttonColor: "#fdfa72",
       },
     },
   },

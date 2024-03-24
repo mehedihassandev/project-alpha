@@ -14,7 +14,7 @@ export const About = () => {
     { name: "Tailwind CSS" },
   ];
   return (
-    <div className="grid grid-cols-2 items-center pl-16 justify-between pt-36">
+    <div className="max-w-screen-2xl h-full grid grid-cols-2 items-center justify-between pl-16">
       <div>
         <h1 className="text-2xl font-semibold text-white font-mono pb-5">
           <span className="text-secendary">01.</span> About Me
