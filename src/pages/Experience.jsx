@@ -8,26 +8,31 @@ export const Experience = () => {
       timePeriod: "Jan 2020 - Prasent",
       institution: "Bangladesh University, Dhaka",
       qualification: "Bachelor of Computer Science (BSC)",
+      result: "Running",
     },
     {
       timePeriod: "Jan 2015 - Dec 2019",
       institution: "Sirajganj Institute Of Technology, Sirajganj",
       qualification: "Computer Science (Diploma)",
+      result: "CGPA: 3.34 out of 4.00",
     },
     {
       timePeriod: "Jan 2011 - Dec 2015",
       institution: "Sabuj Kannan School And College, Sirajganj",
       qualification: "Secendary School Certificate (SSC)",
+      result: "GPA: 4.67 out of 5.00",
     },
     {
       timePeriod: "Jan 2010 - Dec 2011",
       institution: "Govt Sara Marwari Model School And College, Ishwardi",
       qualification: "6th Class",
+      result: "",
     },
     {
       timePeriod: "Jan 2006 - Dec 2010",
       institution: "Vatpiyari Primary School, Sirajganj",
       qualification: "Primary School Certificate (PSC)",
+      result: "First Division",
     },
   ];
 
@@ -135,7 +140,7 @@ export const Experience = () => {
                         {exp.skills.map((skill, index) => (
                           <motion.div
                             key={index}
-                            className="w-28 h-10 bg-buttonColor rounded-full items-center justify-center flex cursor-pointer"
+                            className="w-24 h-8 text-[.75rem] bg-buttonColor rounded-full items-center justify-center flex cursor-pointer"
                             whileHover={{
                               scale: 1.05,
                               boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
@@ -178,6 +183,9 @@ export const Experience = () => {
                         </span>{" "}
                         | {item.qualification}
                       </h3>
+                      <p className="mt-2 text-tsecendary text-[.75rem]">
+                        {item.result}
+                      </p>
                     </div>
                   ))}
                 </div>
