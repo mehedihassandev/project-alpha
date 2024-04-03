@@ -8,7 +8,7 @@ export const Experience = () => {
       timePeriod: "Jan 2020 - Prasent",
       institution: "Bangladesh University, Dhaka",
       qualification: "Bachelor of Computer Science (BSC)",
-      result: "Running",
+      result: "GPA: 3.62 out of 4.00",
     },
     {
       timePeriod: "Jan 2015 - Dec 2019",
@@ -72,17 +72,17 @@ export const Experience = () => {
         "Tailwind CSS",
       ],
     },
-    {
-      id: 2,
-      date: "June 2019 - Jan 2020",
-      title: "Creative IT Institute",
-      position: "Junior Frontend Developer",
-      description: [
-        "Creative IT is an institution where empowering the community with an excellent standard of learning is what we desire. We endeavour for the continuous improvement of our leaders who will work to construct a better future. We will continue to share our knowledge for contributing to the success of individuals and to serve society in the best interest.",
-      ],
-      highlights: [],
-      skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"],
-    },
+    // {
+    //   id: 2,
+    //   date: "June 2019 - Jan 2020",
+    //   title: "Creative IT Institute",
+    //   position: "Junior Frontend Developer",
+    //   description: [
+    //     "Creative IT is an institution where empowering the community with an excellent standard of learning is what we desire. We endeavour for the continuous improvement of our leaders who will work to construct a better future. We will continue to share our knowledge for contributing to the success of individuals and to serve society in the best interest.",
+    //   ],
+    //   highlights: [],
+    //   skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+    // },
   ];
 
   return (
@@ -159,7 +159,7 @@ export const Experience = () => {
         </div>
       </div>
 
-      <div className="pt-5">
+      {/* <div className="pt-5">
         <h1 className="text-2xl font-semibold text-white font-mono pb-5">
           <span className="text-secendary">02.2.</span> Education
         </h1>
@@ -193,7 +193,7 @@ export const Experience = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
