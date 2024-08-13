@@ -22,6 +22,7 @@ export const Projects = () => {
         "Maath",
       ],
       imgSrc: "../../src/assets/t_shirt.gif",
+      errorImgSrc: "https://i.ibb.co/4ZmpdT4/t-shirt.gif",
     },
     {
       id: 2,
@@ -37,6 +38,7 @@ export const Projects = () => {
         "Maath",
       ],
       imgSrc: "../../src/assets/portfolio.gif",
+      errorImgSrc: "https://i.ibb.co/8D6gDxb/portfolio.png",
     },
     {
       id: 3,
@@ -51,6 +53,7 @@ export const Projects = () => {
         "Free API",
       ],
       imgSrc: "../../src/assets/movie.gif",
+      errorImgSrc: "https://i.ibb.co/4PznGJw/movie.gif",
     },
     {
       id: 4,
@@ -66,6 +69,7 @@ export const Projects = () => {
         "JSON Server",
       ],
       imgSrc: "../../src/assets/crud.gif",
+      errorImgSrc: "https://i.ibb.co/QjtC1kB/crud.gif",
     },
   ];
   return (
@@ -90,6 +94,10 @@ export const Projects = () => {
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secendary}`,
+                  }}
+                  onError={(e) => {
+                    (e.target.onerror = null),
+                      (e.target.src = item.errorImgSrc);
                   }}
                 />
               </div>
@@ -134,6 +142,10 @@ export const Projects = () => {
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secendary}`,
                     transform: "translateY(-10px) translateX(-10px)",
+                  }}
+                  onError={(e) => {
+                    (e.target.onerror = null),
+                      (e.target.src = item.errorImgSrc);
                   }}
                 />
               </div>

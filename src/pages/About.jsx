@@ -109,6 +109,10 @@ export const About = () => {
             transform: "translateY(-10px) translateX(-10px)",
             boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secendary}`,
           }}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://i.ibb.co/dKxMcmd/me.jpg";
+          }}
         />
       </div>
     </div>
