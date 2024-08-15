@@ -4,7 +4,7 @@ export const Header = () => {
     <div className="pb-6">
       <p className="text-sm text-secendary pb-1 ">Hi, my name is</p>
       <h1 className="text-4xl pb-2">Md. Mehedi Hassan</h1>
-      <p className="text-lg">Junior Frontend Engineer</p>
+      <p className="text-lg">Software Engineer</p>
       <motion.p
         whileHover={{
           color: "#fff",

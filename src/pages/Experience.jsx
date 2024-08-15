@@ -22,12 +22,12 @@ export const Experience = () => {
       qualification: "Secendary School Certificate (SSC)",
       result: "GPA: 4.67 out of 5.00",
     },
-    {
-      timePeriod: "Jan 2010 - Dec 2011",
-      institution: "Govt Sara Marwari Model School And College, Ishwardi",
-      qualification: "6th Class",
-      result: "",
-    },
+    // {
+    //   timePeriod: "Jan 2010 - Dec 2011",
+    //   institution: "Govt Sara Marwari Model School And College, Ishwardi",
+    //   qualification: "6th Class",
+    //   result: "",
+    // },
     {
       timePeriod: "Jan 2006 - Dec 2010",
       institution: "Vatpiyari Primary School, Sirajganj",
@@ -159,7 +159,7 @@ export const Experience = () => {
         </div>
       </div>
 
-      {/* <div className="pt-5">
+      <div className="pt-5">
         <h1 className="text-2xl font-semibold text-white font-mono pb-5">
           <span className="text-secendary">02.2.</span> Education
         </h1>
@@ -193,7 +193,7 @@ export const Experience = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

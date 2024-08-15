@@ -115,11 +115,11 @@ export const Projects = () => {
               >
                 {item.description}
               </motion.p>
-              <div className="flex items-center gap-3 pt-5">
+              <div className="grid grid-cols-5 gap-3 items-center justify-around pt-5">
                 {item.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
-                    className="w-24 h-8 text-[.75rem] bg-buttonColor rounded-full items-center justify-center flex cursor-pointer"
+                    className="w-28 h-9 text-[.85rem] bg-buttonColor rounded-full items-center justify-center flex cursor-pointer"
                     whileHover={{
                       scale: 1.05,
                       boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
