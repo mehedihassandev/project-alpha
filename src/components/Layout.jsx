@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { MdOutlineHorizontalRule } from "react-icons/md";
+import { MdOutlineHorizontalRule, MdMenu, MdClose } from "react-icons/md";
 import { NavLink, useLocation } from "react-router-dom";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config";
@@ -12,6 +12,7 @@ export const Layout = ({ children }) => {
   const theme = resolveConfig(tailwindConfig);
   const location = useLocation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const handleMouseMove = (e) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
@@ -47,6 +48,7 @@ export const Layout = ({ children }) => {
       icon: <MdOutlineHorizontalRule />,
     },
   ];
+
   return (
     <div className="flex">
       <div
@@ -60,20 +62,40 @@ export const Layout = ({ children }) => {
           pointerEvents: "none",
         }}
       ></div>
-      <div className="bg-primary text-white h-screen w-[600px] pl-10 flex flex-col justify-around">
+
+      <motion.button
+        className="absolute top-6 left-6 z-50 text-white lg:hidden"
+        onClick={() => setShowSidebar(!showSidebar)}
+        whileHover={{ scale: 1.2, color: "#FFD700" }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: showSidebar ? 90 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          {showSidebar ? <MdClose size={28} /> : <MdMenu size={28} />}
+        </motion.div>
+      </motion.button>
+
+      <div
+        className={`bg-primary text-white h-screen w-screen lg:w-[600px] xl:w-[600px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
+          } lg:left-0`}
+      >
         <div>
           <Header />
           {menuItem.map((item, index) => (
             <NavLink
               to={item.path}
               key={index}
-              className="flex items-center hover:text-[#fff] text-[#94A3B8] py-[10px] px-[10px] gap-[15px] transition-all duration-500 "
+              className="flex items-center hover:text-secondary text-[#94A3B8] py-[10px] px-[10px] gap-[15px] transition-all duration-500"
+              onClick={() => setShowSidebar(false)}
             >
               <motion.div
                 animate={{
                   color:
                     location.pathname === item.path
-                      ? theme.theme.colors.secendary
+                      ? theme.theme.colors.secondary
                       : "#94A3B8",
                   fontSize: location.pathname === item.path ? "2rem" : "1.5rem",
                 }}
@@ -85,7 +107,7 @@ export const Layout = ({ children }) => {
                 animate={{
                   color:
                     location.pathname === item.path
-                      ? theme.theme.colors.secendary
+                      ? theme.theme.colors.secondary
                       : "#94A3B8",
                   transform:
                     location.pathname === item.path
@@ -108,7 +130,7 @@ export const Layout = ({ children }) => {
         </div>
         <Footer />
       </div>
-      <main className="w-full h-screen bg-primary">{children}</main>
+      <main className="w-full h-screen bg-primary overflow-auto">{children}</main>
     </div>
   );
 };

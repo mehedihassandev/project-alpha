@@ -37,7 +37,7 @@ export const Footer = () => {
     },
   ];
   return (
-    <div className="flex gap-5 text-tsecendary">
+    <div className="flex gap-5 text-textColor">
       {socialLinks.map((link, index) => (
         <motion.a
           key={index}
@@ -46,7 +46,7 @@ export const Footer = () => {
           rel={link.rel}
           className={link.className}
           whileHover={{
-            color: theme.theme.colors.secendary,
+            color: theme.theme.colors.secondary,
             scale: 1.2,
             transform: "translateY(-10px)",
           }}
