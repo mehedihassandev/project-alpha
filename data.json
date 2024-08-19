@@ -1,0 +1,130 @@
+{
+  "educationData": [
+    {
+      "timePeriod": "Jan 2020 - Present",
+      "institution": "Bangladesh University, Dhaka",
+      "qualification": "Bachelor of Computer Science (BSC)",
+      "result": "GPA: 3.62 out of 4.00"
+    },
+    {
+      "timePeriod": "Jan 2015 - Dec 2019",
+      "institution": "Sirajganj Institute Of Technology, Sirajganj",
+      "qualification": "Computer Science (Diploma)",
+      "result": "CGPA: 3.34 out of 4.00"
+    },
+    {
+      "timePeriod": "Jan 2011 - Dec 2015",
+      "institution": "Sabuj Kannan School And College, Sirajganj",
+      "qualification": "Secondary School Certificate (SSC)",
+      "result": "GPA: 4.67 out of 5.00"
+    },
+    {
+      "timePeriod": "Jan 2010 - Dec 2011",
+      "institution": "Govt Sara Marwari Model School And College, Ishwardi",
+      "qualification": "6th Class",
+      "result": ""
+    },
+    {
+      "timePeriod": "Jan 2006 - Dec 2010",
+      "institution": "Vatpiyari Primary School, Sirajganj",
+      "qualification": "Primary School Certificate (PSC)",
+      "result": "First Division"
+    }
+  ],
+  "experiencesData": [
+    {
+      "id": 1,
+      "date": "June 2023 - Present",
+      "title": "Hubar Tech Ltd.",
+      "position": "Junior Frontend Developer",
+      "description": [
+        "Hubar Tech is a software development company that specializes in Telecoms Software. It is a sister company of UK-based Exos Systems Ltd.",
+        "Create and maintain essential components inside the Redux and React Typescript frontend framework, which are essential to the functionality of the overall project. Working collaboratively with developers, designers, and product managers, we can ensure that user-centric design principles and diversity are prioritized in our development efforts by advocating for and implementing best practices in web accessibility."
+      ],
+      "highlights": [
+        {
+          "title": "Point of Sale (POS) System:",
+          "detail": "With cutting-edge technology, our Point of Sale (POS) System redefines transactions. By seamlessly incorporating state-of-the-art technologies, it improves customer experiences, expedites processes, and boosts productivity, completely changing the retail environment for both customers and enterprises."
+        },
+        {
+          "title": "Process Control Management (PCM) System:",
+          "detail": "The PCM system streamlines procedures, reduces errors, and increases production for companies in a variety of industries, improving operational efficiency."
+        },
+        {
+          "title": "Electronic Bill (E-Bill) System:",
+          "detail": "The E-Bill System simplifies billing processes, enabling electronic invoicing, payments, and record-keeping, fostering efficiency and convenience for businesses and customers."
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Redux",
+        "Material UI",
+        "Tailwind CSS"
+      ]
+    }
+  ],
+  "portfolioItems": [
+    {
+      "id": 1,
+      "title": "T-Shirt Customization",
+      "description": "This is the t-shirt customization project. Using this site you can design your t-shirt as you want. You can change the color, logo, structure and many more things. This is a very interesting project. I hope you will enjoy it.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Frame Motion",
+        "Three JS",
+        "Valtio",
+        "Maath"
+      ],
+      "imgSrc": "../../src/assets/t_shirt.gif",
+      "errorImgSrc": "https://i.ibb.co/4ZmpdT4/t-shirt.gif"
+    },
+    {
+      "id": 2,
+      "title": "Portfolio Project",
+      "description": "This is the portfolio project. When I built this app I was a beginner in Frame Motion, Three JS and Maath. I learned a lot of things from this project. I hope you will enjoy it. I will be happy if you give me some feedback about this project. I will try to improve it. Thank you.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Frame Motion",
+        "Three JS",
+        "Maath"
+      ],
+      "imgSrc": "../../src/assets/portfolio.gif",
+      "errorImgSrc": "https://i.ibb.co/8D6gDxb/portfolio.png"
+    },
+    {
+      "id": 3,
+      "title": "Movie Site",
+      "description": "This is the movie site project. Using this site you can see the latest movies. You can see the movie details, rating, review and many more things. There I use free API to get movie list. I hope you will enjoy it.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Material UI",
+        "Free API"
+      ],
+      "imgSrc": "../../src/assets/movie.gif",
+      "errorImgSrc": "https://i.ibb.co/4PznGJw/movie.gif"
+    },
+    {
+      "id": 4,
+      "title": "CRUD Operation",
+      "description": "This is the CRUD operation project. Using this site you can create, read, update and delete the data. There I use free API to get data and update the data. Also use JSON server to store the data. I hope you will enjoy it.",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Material UI",
+        "Free API",
+        "JSON Server"
+      ],
+      "imgSrc": "../../src/assets/crud.gif",
+      "errorImgSrc": "https://i.ibb.co/QjtC1kB/crud.gif"
+    }
+  ]
+}
