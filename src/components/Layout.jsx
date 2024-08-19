@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { MdOutlineHorizontalRule, MdMenu, MdClose } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 import { NavLink, useLocation } from "react-router-dom";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { menus } from "../navigator/menu";
+import { iconHash } from "../../utils/icon/icons";
 
 export const Layout = ({ children }) => {
   const theme = resolveConfig(tailwindConfig);
@@ -26,28 +28,6 @@ export const Layout = ({ children }) => {
     };
   }, []);
 
-  const menuItem = [
-    {
-      path: "/",
-      name: "Home",
-      icon: <MdOutlineHorizontalRule />,
-    },
-    {
-      path: "/about",
-      name: "About",
-      icon: <MdOutlineHorizontalRule />,
-    },
-    {
-      path: "/expericence",
-      name: "Education & Expericence",
-      icon: <MdOutlineHorizontalRule />,
-    },
-    {
-      path: "/project",
-      name: "Project",
-      icon: <MdOutlineHorizontalRule />,
-    },
-  ];
 
   return (
     <div className="flex">
@@ -84,7 +64,7 @@ export const Layout = ({ children }) => {
       >
         <div>
           <Header />
-          {menuItem.map((item, index) => (
+          {menus.map((item, index) => (
             <NavLink
               to={item.path}
               key={index}
@@ -100,7 +80,7 @@ export const Layout = ({ children }) => {
                   fontSize: location.pathname === item.path ? "2rem" : "1.5rem",
                 }}
               >
-                {item.icon}
+                {iconHash[item.icon]}
               </motion.div>
               <motion.div
                 className="text-[1rem]"
@@ -116,7 +96,7 @@ export const Layout = ({ children }) => {
                   scale: location.pathname === item.path ? 1.2 : 1,
                 }}
                 whileHover={{
-                  color: "#fff",
+                  color: theme.theme.colors.secondary,
                   scale: location.pathname !== item.path && 1.2,
                   transform:
                     location.pathname !== item.path && "translateX(10px)",
