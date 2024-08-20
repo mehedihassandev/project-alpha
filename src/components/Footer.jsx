@@ -28,7 +28,7 @@ export const Footer = () => {
               transform: "translateY(-10px)",
             }}
           >
-            <img src={link.imgSrc} alt={link.icon} />
+            <img src={link.imgSrc} alt={link.icon} className="w-8 h-8" />
           </motion.a>
         ))}
       </div>
