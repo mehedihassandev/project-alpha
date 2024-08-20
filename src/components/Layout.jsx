@@ -63,7 +63,17 @@ export const Layout = ({ children }) => {
 
         <Footer />
       </div>
-      <main className="w-full h-screen bg-primary overflow-auto">{children}</main>
+      <main className="w-full h-screen bg-primary overflow-auto relative">
+        <img
+          src="https://i.ibb.co/84q4GTv/HI-2.png"
+          alt="Background"
+          className="fixed w-[700px] h-[600px] top-1/2 left-1/3 transform translate-x-1/3 -translate-y-1/2 z-10 opacity-100"
+          style={{ zIndex: 1 }}
+        />
+        <div style={{ position: 'relative', zIndex: 2 }}>
+          {children}
+        </div>
+      </main>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { menus } from "../navigator/menu";
 import { motion } from "framer-motion";
 import { iconHash } from "../../utils/icon/icons";
 
-const Menu = ({ setShowSidebar }) => {
+export const Menu = ({ setShowSidebar }) => {
     const location = useLocation();
 
     return (

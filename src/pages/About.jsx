@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import { IoMdArrowDropright } from "react-icons/io";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
 
 export const About = () => {
-  const theme = resolveConfig(tailwindConfig);
   const skills = [
     { name: "JavaScript (ES6+)" },
     { name: "React" },
@@ -14,7 +11,7 @@ export const About = () => {
     { name: "Tailwind CSS" },
   ];
   return (
-    <div className="max-w-screen-2xl h-full grid grid-cols-2 items-center justify-between pl-16">
+    <div className="max-w-screen-xl h-screen grid items-center justify-between px-16">
       <div>
         <h1 className="text-2xl font-semibold text-white font-mono pb-5">
           <span className="text-secondary">01.</span> About Me
@@ -97,7 +94,7 @@ export const About = () => {
         </div>
       </div>
 
-      <div className="pl-24">
+      {/* <div className="pl-24">
         <motion.img
           src="../../src/assets/me.jpg"
           alt="about"
@@ -114,7 +111,7 @@ export const About = () => {
             e.target.src = "https://i.ibb.co/dKxMcmd/me.jpg";
           }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
