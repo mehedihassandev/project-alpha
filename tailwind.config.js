@@ -9,6 +9,10 @@ export default {
                 textColor: "#94A3B8",
                 buttonColor: "#19E684",
             },
+            fontFamily: {
+                saira: ['"Saira"', "sans-serif"],
+                syne: ['"Syne"', "sans-serif"],
+            },
         },
     },
     plugins: [],
