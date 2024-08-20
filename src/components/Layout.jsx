@@ -2,17 +2,11 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
-import { NavLink, useLocation } from "react-router-dom";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import { menus } from "../navigator/menu";
-import { iconHash } from "../../utils/icon/icons";
+import { Menu } from "./Menu";
 
 export const Layout = ({ children }) => {
-  const theme = resolveConfig(tailwindConfig);
-  const location = useLocation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -30,7 +24,7 @@ export const Layout = ({ children }) => {
 
 
   return (
-    <div className="flex">
+    <div className="flex bg-primary text-white">
       <div
         style={{
           position: "absolute",
@@ -59,55 +53,14 @@ export const Layout = ({ children }) => {
       </motion.button>
 
       <div
-        className={`bg-primary text-white h-screen w-screen lg:w-[600px] xl:w-[600px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
-          } lg:left-0`}
+        className={`bg-primary h-screen w-screen lg:w-[700px] xl:w-[700px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
+          } lg:left-0 border-r-2 border-secondary rounded-2xl`}
       >
         <div>
           <Header />
-          {menus.map((item, index) => (
-            <NavLink
-              to={item.path}
-              key={index}
-              className="flex items-center hover:text-secondary text-[#94A3B8] py-[10px] px-[10px] gap-[15px] transition-all duration-500"
-              onClick={() => setShowSidebar(false)}
-            >
-              <motion.div
-                animate={{
-                  color:
-                    location.pathname === item.path
-                      ? theme.theme.colors.secondary
-                      : "#94A3B8",
-                  fontSize: location.pathname === item.path ? "2rem" : "1.5rem",
-                }}
-              >
-                {iconHash[item.icon]}
-              </motion.div>
-              <motion.div
-                className="text-[1rem]"
-                animate={{
-                  color:
-                    location.pathname === item.path
-                      ? theme.theme.colors.secondary
-                      : "#94A3B8",
-                  transform:
-                    location.pathname === item.path
-                      ? "translateX(5px)"
-                      : "translateX(0px)",
-                  scale: location.pathname === item.path ? 1.2 : 1,
-                }}
-                whileHover={{
-                  color: theme.theme.colors.secondary,
-                  scale: location.pathname !== item.path && 1.2,
-                  transform:
-                    location.pathname !== item.path && "translateX(10px)",
-                  transition: { duration: 0.2 },
-                }}
-              >
-                {item.name}
-              </motion.div>
-            </NavLink>
-          ))}
+          <Menu setShowSidebar={setShowSidebar} />
         </div>
+
         <Footer />
       </div>
       <main className="w-full h-screen bg-primary overflow-auto">{children}</main>

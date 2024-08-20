@@ -1,11 +1,13 @@
-import { motion } from "framer-motion";
 export const Header = () => {
   return (
-    <div className="pb-6">
-      <p className="text-sm text-secondary pb-1 ">Hi, my name is</p>
+    <div className="py-6">
+      {/* <p className="text-sm text-secondary pb-1 ">Hi, my name is</p> */}
+      {/* <img src="https://i.ibb.co/dKxMcmd/me.jpg" alt="Md. Mehedi Hassan" className="w-[424px] h-[500px] rounded-xl mb-8" /> */}
       <h1 className="text-4xl pb-2">Md. Mehedi Hassan</h1>
       <p className="text-lg">Junior Frontend Engineer</p>
-      <motion.p
+
+
+      {/* <motion.p
         whileHover={{
           color: "#fff",
           scale: 1.05,
@@ -21,7 +23,7 @@ export const Header = () => {
         <span className="text-secondary">Redux</span>. Devoted to maximizing
         maintainability of <span className="text-secondary">code</span> and user
         experience.
-      </motion.p>
+      </motion.p> */}
     </div>
   );
 };
