@@ -18,7 +18,7 @@ export const Menu = ({ setShowSidebar }) => {
                 >
                     <motion.div>{iconHash[item.icon]}</motion.div>
                     <motion.div
-                        className="text-[1rem]"
+                        className="text-[1rem] font-poppins"
                         whileHover={{
                             scale: location.pathname !== item.path ? 1.2 : 1,
                             transform:
