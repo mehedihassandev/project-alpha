@@ -53,7 +53,7 @@ export const Layout = ({ children }) => {
       </motion.button>
 
       <div
-        className={`bg-primary h-screen w-screen lg:w-[700px] xl:w-[700px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
+        className={`bg-primary h-screen w-screen lg:w-[550px] xl:w-[550px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
           } lg:left-0 border-r-2 border-secondary rounded-2xl`}
       >
         <div>
@@ -65,9 +65,9 @@ export const Layout = ({ children }) => {
       </div>
       <main className="w-full h-screen bg-primary overflow-auto relative">
         <img
-          src="https://i.ibb.co/84q4GTv/HI-2.png"
+          src="https://i.ibb.co/R7nJpLv/HI.png"
           alt="Background"
-          className="fixed w-[700px] h-[600px] top-1/2 left-1/3 transform translate-x-1/3 -translate-y-1/2 z-10 opacity-100"
+          className="fixed top-1/2 left-1/2 transform -translate-x-1/1 -translate-y-1/2 z-10 opacity-100"
           style={{ zIndex: 1 }}
         />
         <div style={{ position: 'relative', zIndex: 2 }}>
