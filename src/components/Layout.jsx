@@ -67,7 +67,7 @@ export const Layout = ({ children }) => {
         <img
           src="https://i.ibb.co/R7nJpLv/HI.png"
           alt="Background"
-          className="fixed top-1/2 left-1/2 transform -translate-x-1/1 -translate-y-1/2 z-10 opacity-100"
+          className="fixed w-[200px] h-[125px] lg:w-[350px] lg:h-[300px] top-1/2 left-1/3 lg:left-1/2 transform -translate-x-1/1 -translate-y-1/2 z-10 opacity-100"
           style={{ zIndex: 1 }}
         />
         <div style={{ position: 'relative', zIndex: 2 }}>
