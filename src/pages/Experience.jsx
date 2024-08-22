@@ -11,7 +11,7 @@ export const Experience = () => {
   return (
     <div className="w-full h-screen grid grid-cols items-center pl-16 overflow-y-scroll p-20">
       <div className="pb-10">
-        <h1 className="text-2xl font-semibold text-white font-mono pb-5">
+        <h1 className="text-3xl font-semibold text-white font-saira pb-5">
           <span className="text-secondary">02.1.</span> Experience
         </h1>
 
@@ -25,24 +25,24 @@ export const Experience = () => {
                       key={exp.id}
                       className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-white hover:before:bg-secondary"
                     >
-                      <time className="text-[.65rem] font-mono uppercase text-white">
+                      <time className="text-xs font-syne uppercase text-white">
                         {exp.date}
                       </time>
-                      <h3 className="text-[1rem] text-white">
+                      <h3 className="text-xl text-white font-syne">
                         <span className="font-semibold">
                           {exp.title}
-                        </span>{" "}
+                        </span>
                         | {exp.position}
                       </h3>
                       {exp.description.map(
                         (desc, index) => (
                           <motion.p
                             key={index}
-                            className="mt-2 text-textColor text-[.85rem]"
-                            whileHover={{
-                              color: "#fff",
-                              scale: 1.03,
-                            }}
+                            className="mt-2 text-textColor text-lg leading-6 font-syne"
+                          // whileHover={{
+                          //   color: "#fff",
+                          //   scale: 1.03,
+                          // }}
                           >
                             {desc}
                           </motion.p>
@@ -52,15 +52,15 @@ export const Experience = () => {
                         (highlight, index) => (
                           <motion.li
                             key={index}
-                            className="pt-5 text-textColor text-[.85rem]"
-                            whileHover={{
-                              color: "#fff",
-                              scale: 1.03,
-                            }}
+                            className="pt-5 text-textColor text-lg leading-6 font-syne"
+                          // whileHover={{
+                          //   color: "#fff",
+                          //   scale: 1.03,
+                          // }}
                           >
                             <span className="text-secondary">
                               {highlight.title}
-                            </span>{" "}
+                            </span>
                             {highlight.detail}
                           </motion.li>
                         )
@@ -70,7 +70,7 @@ export const Experience = () => {
                           (skill, index) => (
                             <motion.div
                               key={index}
-                              className="w-24 h-8 text-[.75rem] bg-buttonColor rounded-full items-center justify-center flex cursor-pointer"
+                              className="w-32 h-8 text-sm text-primary bg-buttonColor rounded-full items-center justify-center flex cursor-pointer font-saira"
                               whileHover={{
                                 scale: 1.05,
                                 boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,

@@ -9,9 +9,9 @@ export const Projects = () => {
   const { portfolioItems } = data;
 
   return (
-    <div className="flex flex-col w-full h-full overflow-y-scroll p-20">
+    <div className="flex flex-col w-full h-full overflow-hidden p-20">
       <div className="pb-5">
-        <h1 className="text-2xl font-semibold text-white font-mono pb-5">
+        <h1 className="text-3xl font-semibold text-white font-saira pb-5">
           <span className="text-secondary">03.</span> Some Things I’ve Built
         </h1>
       </div>
@@ -39,23 +39,17 @@ export const Projects = () => {
               </div>
             )}
             <div>
-              <motion.h2 className="text-secondary text-xl font-sans pb-3">
+              <motion.h2 className="text-secondary text-xl font-syne pb-3">
                 {item.title}
               </motion.h2>
-              <motion.p
-                className="text-textColor text-[.9rem] leading-6"
-                whileHover={{
-                  color: "#fff",
-                  scale: 1.05,
-                }}
-              >
+              <motion.p className="text-textColor text-lg leading-6 font-syne pb-3">
                 {item.description}
               </motion.p>
-              <div className="flex items-center gap-3 pt-5">
+              <div className="grid grid-cols-4 gap-3 pt-3">
                 {item.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
-                    className="w-24 h-8 text-[.75rem] bg-buttonColor rounded-full items-center justify-center flex cursor-pointer"
+                    className="w-32 h-8 text-sm text-primary bg-buttonColor rounded-full items-center justify-center flex cursor-pointer font-poppins"
                     whileHover={{
                       scale: 1.05,
                       boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,

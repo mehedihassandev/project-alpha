@@ -1,16 +1,12 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { MdOutlineHorizontalRule, MdMenu, MdClose } from "react-icons/md";
-import { NavLink, useLocation } from "react-router-dom";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
+import { MdMenu, MdClose } from "react-icons/md";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { Menu } from "./Menu";
 
 export const Layout = ({ children }) => {
-  const theme = resolveConfig(tailwindConfig);
-  const location = useLocation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -26,31 +22,9 @@ export const Layout = ({ children }) => {
     };
   }, []);
 
-  const menuItem = [
-    {
-      path: "/",
-      name: "Home",
-      icon: <MdOutlineHorizontalRule />,
-    },
-    {
-      path: "/about",
-      name: "About",
-      icon: <MdOutlineHorizontalRule />,
-    },
-    {
-      path: "/expericence",
-      name: "Education & Expericence",
-      icon: <MdOutlineHorizontalRule />,
-    },
-    {
-      path: "/project",
-      name: "Project",
-      icon: <MdOutlineHorizontalRule />,
-    },
-  ];
 
   return (
-    <div className="flex">
+    <div className="flex bg-primary text-white">
       <div
         style={{
           position: "absolute",
@@ -79,58 +53,27 @@ export const Layout = ({ children }) => {
       </motion.button>
 
       <div
-        className={`bg-primary text-white h-screen w-screen lg:w-[600px] xl:w-[600px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
-          } lg:left-0`}
+        className={`bg-primary h-screen w-screen lg:w-[550px] xl:w-[550px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
+          } lg:left-0 border-r-2 border-secondary rounded-2xl`}
       >
         <div>
           <Header />
-          {menuItem.map((item, index) => (
-            <NavLink
-              to={item.path}
-              key={index}
-              className="flex items-center hover:text-secondary text-[#94A3B8] py-[10px] px-[10px] gap-[15px] transition-all duration-500"
-              onClick={() => setShowSidebar(false)}
-            >
-              <motion.div
-                animate={{
-                  color:
-                    location.pathname === item.path
-                      ? theme.theme.colors.secondary
-                      : "#94A3B8",
-                  fontSize: location.pathname === item.path ? "2rem" : "1.5rem",
-                }}
-              >
-                {item.icon}
-              </motion.div>
-              <motion.div
-                className="text-[1rem]"
-                animate={{
-                  color:
-                    location.pathname === item.path
-                      ? theme.theme.colors.secondary
-                      : "#94A3B8",
-                  transform:
-                    location.pathname === item.path
-                      ? "translateX(5px)"
-                      : "translateX(0px)",
-                  scale: location.pathname === item.path ? 1.2 : 1,
-                }}
-                whileHover={{
-                  color: "#fff",
-                  scale: location.pathname !== item.path && 1.2,
-                  transform:
-                    location.pathname !== item.path && "translateX(10px)",
-                  transition: { duration: 0.2 },
-                }}
-              >
-                {item.name}
-              </motion.div>
-            </NavLink>
-          ))}
+          <Menu setShowSidebar={setShowSidebar} />
         </div>
+
         <Footer />
       </div>
-      <main className="w-full h-screen bg-primary overflow-auto">{children}</main>
+      <main className="w-full h-screen bg-primary overflow-auto relative">
+        <img
+          src="https://i.ibb.co/R7nJpLv/HI.png"
+          alt="Background"
+          className="fixed w-[200px] h-[125px] lg:w-[350px] lg:h-[300px] top-1/2 left-1/3 lg:left-1/2 transform -translate-x-1/1 -translate-y-1/2 z-10 opacity-100"
+          style={{ zIndex: 1 }}
+        />
+        <div style={{ position: 'relative', zIndex: 2 }}>
+          {children}
+        </div>
+      </main>
     </div>
   );
 };

@@ -1,21 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Layout } from "./components/Layout"
-import { Home } from "./pages/Home"
-import { Experience } from "./pages/Experience"
-import { About } from "./pages/About"
-import { Projects } from "./pages/Projects"
+import { BrowserRouter } from "react-router-dom"
 import './App.css'
+import RouterConfig from "./navigator/RouterConfig"
+import Layout from "./components/Layout"
 
 export const App = () => {
   return (
     <BrowserRouter>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/expericence" element={<Experience />} />
-          <Route path="/project" element={<Projects />} />
-        </Routes>
+        <RouterConfig />
       </Layout>
     </BrowserRouter>
   )
