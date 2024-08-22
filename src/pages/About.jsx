@@ -9,7 +9,7 @@ export const About = () => {
   const { skills } = data;
 
   return (
-    <div className="max-w-screen-xl h-screen grid items-center justify-between px-16 py-16">
+    <div className="max-w-screen-xl h-screen grid items-center justify-between px-16 py-10">
       <div>
         <h1 className="text-3xl font-semibold text-white font-saira pb-5">
           <span className="text-secondary">01.</span> About Me
