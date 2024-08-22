@@ -11,7 +11,7 @@ export const Projects = () => {
   return (
     <div className="flex flex-col w-full h-full overflow-hidden p-20">
       <div className="pb-5">
-        <h1 className="text-3xl font-semibold text-white font-saira pb-5">
+        <h1 className="text-3xl font-semibold text-textColor font-saira pb-5">
           <span className="text-secondary">03.</span> Some Things I’ve Built
         </h1>
       </div>
@@ -49,7 +49,7 @@ export const Projects = () => {
                 {item.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
-                    className="w-32 h-8 text-sm text-primary bg-buttonColor rounded-full items-center justify-center flex cursor-pointer font-poppins"
+                    className="w-32 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
                     whileHover={{
                       scale: 1.05,
                       boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
