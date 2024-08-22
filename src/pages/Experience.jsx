@@ -9,17 +9,17 @@ export const Experience = () => {
   const { experiencesData } = data;
 
   return (
-    <div className="w-full h-screen grid grid-cols items-center pl-16 overflow-y-scroll p-20">
-      <div className="pb-10">
-        <h1 className="text-3xl font-semibold text-white font-saira pb-5">
+    <div className="w-full h-screen grid grid-cols items-center pl-10 lg:pl-14 xl:pl-14 overflow-auto p-5 lg:p-10 xl:p-20">
+      <div className="max-w-screen-2xl py-6 lg:py-10">
+        <h1 className="text-3xl font-semibold text-white font-saira pb-5 pl-5 lg:pl-0">
           <span className="text-secondary">02.1.</span> Experience
         </h1>
 
         <div className="w-full pt-5">
-          <div className="max-w-screen-2xl px-11">
-            <div className="grid gap-4 mx-4 sm:grid-cols-12">
-              <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-                <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
+          <div className="px-0 lg:px-5">
+            <div className="grid gap-4 mx-0 lg:mx-4 grid-cols-1">
+              <div className="relative px-0 lg:px-4 space-y-6">
+                <div className="space-y-12 relative px-4 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
                   {experiencesData.map((exp) => (
                     <div
                       key={exp.id}
@@ -39,10 +39,6 @@ export const Experience = () => {
                           <motion.p
                             key={index}
                             className="mt-2 text-textColor text-lg leading-6 font-syne"
-                          // whileHover={{
-                          //   color: "#fff",
-                          //   scale: 1.03,
-                          // }}
                           >
                             {desc}
                           </motion.p>
@@ -53,10 +49,6 @@ export const Experience = () => {
                           <motion.li
                             key={index}
                             className="pt-5 text-textColor text-lg leading-6 font-syne"
-                          // whileHover={{
-                          //   color: "#fff",
-                          //   scale: 1.03,
-                          // }}
                           >
                             <span className="text-secondary">
                               {highlight.title}
@@ -65,12 +57,12 @@ export const Experience = () => {
                           </motion.li>
                         )
                       )}
-                      <div className="flex items-center gap-3 pt-5">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 items-center gap-3 pt-5">
                         {exp.skills.map(
                           (skill, index) => (
                             <motion.div
                               key={index}
-                              className="w-32 h-8 text-sm text-primary bg-buttonColor rounded-full items-center justify-center flex cursor-pointer font-saira"
+                              className="w-32 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium"
                               whileHover={{
                                 scale: 1.05,
                                 boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,

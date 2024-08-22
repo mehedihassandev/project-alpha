@@ -9,14 +9,14 @@ export const Projects = () => {
   const { portfolioItems } = data;
 
   return (
-    <div className="flex flex-col w-full h-full overflow-hidden p-20">
+    <div className="flex flex-col w-full h-full overflow-hidden px-5 py-10  p-0 lg:p-20">
       <div className="pb-5">
-        <h1 className="text-3xl font-semibold text-white font-saira pb-5">
+        <h1 className="text-3xl font-semibold text-textColor font-saira pl-9 lg:pl-0 pb-5">
           <span className="text-secondary">03.</span> Some Things I’ve Built
         </h1>
       </div>
 
-      <div className="grid grid-cols-2 max-w-screen-2xl gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-2xl gap-16 px-9 lg:px-0">
         {portfolioItems.map((item, index) => (
           <Fragment key={item.id}>
             {index % 2 === 0 && (
@@ -45,11 +45,11 @@ export const Projects = () => {
               <motion.p className="text-textColor text-lg leading-6 font-syne pb-3">
                 {item.description}
               </motion.p>
-              <div className="grid grid-cols-4 gap-3 pt-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-3 pt-3">
                 {item.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
-                    className="w-32 h-8 text-sm text-primary bg-buttonColor rounded-full items-center justify-center flex cursor-pointer font-poppins"
+                    className="w-32 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
                     whileHover={{
                       scale: 1.05,
                       boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
