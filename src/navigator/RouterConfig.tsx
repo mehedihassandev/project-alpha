@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
-import Layout from "../components/Layout";
 import { Route, Routes } from "react-router-dom";
+import { Loader } from "../components/Loader";
 
 const RouterConfig = () => {
     const Home = lazy(() => import("../pages/Home"));
@@ -9,7 +9,7 @@ const RouterConfig = () => {
     const Experience = lazy(() => import("../pages/Experience"));
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

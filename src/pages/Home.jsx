@@ -13,17 +13,11 @@ export const Home = () => {
         </h1>
 
         <div className="block lg:hidden mt-8">
-          <motion.img
+          <img
             src="../assets/me.jpg"
             alt="about"
             className="w-[450px] h-auto"
             style={{ filter: "grayscale(100%)" }}
-            animate={{ filter: "grayscale(100%)" }}
-            whileHover={{
-              filter: "contrast(130%)",
-              transform: "translateY(-10px) translateX(-10px)",
-              boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
-            }}
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = "https://i.ibb.co/dKxMcmd/me.jpg";
@@ -44,10 +38,17 @@ export const Home = () => {
 
 
       <div className="hidden xl:block">
-        <img
+        <motion.img
           src="../assets/me.jpg"
           alt="about"
           className="w-[450px] h-auto"
+          style={{ filter: "grayscale(100%)" }}
+          animate={{ filter: "grayscale(100%)" }}
+          whileHover={{
+            filter: "contrast(130%)",
+            transform: "translateY(-10px) translateX(-10px)",
+            boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
+          }}
           onError={(e) => {
             e.target.onerror = null;
             e.target.src = "https://i.ibb.co/dKxMcmd/me.jpg";
