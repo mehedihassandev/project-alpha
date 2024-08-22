@@ -9,8 +9,8 @@ export const About = () => {
   const { skills } = data;
 
   return (
-    <div className="max-w-screen-xl h-screen grid items-center justify-between px-16 py-10">
-      <div>
+    <div className="max-w-screen-xl h-full grid items-center justify-between px-16 py-10">
+      <div className="pt-10">
         <h1 className="text-3xl font-semibold text-white font-saira pb-5">
           <span className="text-secondary">01.</span> About Me
         </h1>
@@ -50,7 +50,7 @@ export const About = () => {
         <motion.h2 className="text-textColor font-syne py-4 text-xl">
           I&apos;ve recently been working with the following technologies:
         </motion.h2>
-        <div className="grid grid-cols-2 pb-16">
+        <div className="grid grid-cols-2 pb-16 lg:pb-2">
           {skills.map((skill, index) => (
             <div className="flex flex-col gap-2" key={index}>
               <div className="flex items-center gap-2 text-secondary">

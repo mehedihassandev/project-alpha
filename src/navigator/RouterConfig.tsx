@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Loader } from "../components/Loader";
 
-const RouterConfig = () => {
+export const RouterConfig = () => {
     const Home = lazy(() => import("../pages/Home"));
     const About = lazy(() => import("../pages/About"));
     const Projects = lazy(() => import("../pages/Projects"));
