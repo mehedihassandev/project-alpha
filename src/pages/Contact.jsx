@@ -1,15 +1,17 @@
-import React from "react";
-
 export const Contact = () => {
+    const handleMailToClick = (e) => {
+        e.preventDefault();
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mh.web.mehedihassan@gmail.com', '_blank');
+    };
     return (
         <section className="max-w-screen-2xl h-screen grid grid-cols-2 items-center justify-around px-20 py-10">
             <div className="text-textColor">
                 <h1 className="text-2xl font-semibold capitalize lg:text-3xl font-poppins">
-                    Get a quote
+                    Let&apos;s get in touch?
                 </h1>
 
                 <p className="max-w-xl mt-6 font-syne text-lg">
-                    Ask us everything and we would love to hear from you
+                    Ready to collaborate or chat about web development? I’m always open to connecting with fellow developers and enthusiasts. Feel free to reach out!
                 </p>
 
                 <div className="mt-6 space-y-8 md:mt-8">
@@ -20,16 +22,16 @@ export const Contact = () => {
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            stroke-width="2"
+                            strokeWidth="2"
                         >
                             <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                             />
                             <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                             />
                         </svg>
@@ -46,17 +48,17 @@ export const Contact = () => {
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            stroke-width="2"
+                            strokeWidth="2"
                         >
                             <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                             />
                         </svg>
 
                         <span className="mx-2 truncate w-72 text-textColor font-syne text-md">
-                            (880) 1571345727
+                            (+880) 1571345727
                         </span>
                     </p>
 
@@ -67,18 +69,22 @@ export const Contact = () => {
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
-                            stroke-width="2"
+                            strokeWidth="2"
                         >
                             <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                             />
                         </svg>
 
-                        <span className="mx-2 truncate w-72 text-textColor font-syne text-md">
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=mh.web.mehedihassan@gmail.com"
+                            className="mx-2 truncate w-72 text-textColor font-syne text-md"
+                            onClick={handleMailToClick}
+                        >
                             mh.web.mehedihassan@gmail.com
-                        </span>
+                        </a>
                     </p>
                 </div>
             </div>

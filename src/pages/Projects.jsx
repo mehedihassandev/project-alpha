@@ -6,7 +6,7 @@ import data from '../../data.json';
 
 export const Projects = () => {
   const theme = resolveConfig(tailwindConfig);
-  const { portfolioItems } = data;
+  const { projects } = data;
 
   return (
     <div className="flex flex-col w-full h-full overflow-hidden px-5 py-10  p-0 lg:p-20">
@@ -17,7 +17,7 @@ export const Projects = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-2xl gap-16 px-9 lg:px-0">
-        {portfolioItems.map((item, index) => (
+        {projects.map((item, index) => (
           <Fragment key={item.id}>
             {index % 2 === 0 && (
               <div>
@@ -49,7 +49,7 @@ export const Projects = () => {
                 {item.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
-                    className="w-32 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
+                    className="w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
                     whileHover={{
                       scale: 1.05,
                       boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
@@ -58,6 +58,30 @@ export const Projects = () => {
                     {tech}
                   </motion.div>
                 ))}
+              </div>
+
+              <div className="pt-7">
+                <h3 className="text-textColor text-lg font-poppins pb-3">
+                  Links
+                </h3>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-3 pt-3">
+                  {item.links.map((link, linkIndex) => (
+                    <motion.a
+                      key={linkIndex}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
+                      whileHover={{
+                        scale: 1.05,
+                        boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
+                      }}
+                    >
+                      {link.title}
+                    </motion.a>
+                  ))}
+                </div>
               </div>
             </div>
             {index % 2 !== 0 && (
