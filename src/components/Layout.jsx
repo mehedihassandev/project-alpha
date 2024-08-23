@@ -38,7 +38,7 @@ export const Layout = ({ children }) => {
       ></div> */}
 
       <motion.button
-        className="absolute top-6 left-6 z-50 text-white lg:hidden"
+        className="absolute top-4 right-4 z-50 text-white lg:hidden"
         onClick={() => setShowSidebar(!showSidebar)}
         whileHover={{ scale: 1.2, color: "#FFD700" }}
         whileTap={{ scale: 0.9 }}

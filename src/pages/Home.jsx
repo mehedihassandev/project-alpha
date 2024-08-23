@@ -6,7 +6,7 @@ export const Home = () => {
   const theme = resolveConfig(tailwindConfig);
 
   return (
-    <div className="w-full h-screen items-center px-14 overflow-hidden grid grid-cols-3 gap-16 align-middle">
+    <div className="w-full h-full lg:h-screen items-center px-14 overflow-hidden grid grid-cols-3 gap-16 align-middle">
       <div className="col-span-6 xl:col-span-2 py-8 lg:py-24 mt-2 lg:mt-32 xl:mt-0">
         <h1 className="text-xl lg:text-3xl xl:text-[48px] text-white leading-7 lg:leading-[45px] xl:leading-[65px] font-saira">
           Maximize Your Business <span className="text-secondary font-bold underline">Potential</span> <br /> with Custom Web Development <br /> <span className="text-secondary font-bold underline">Solutions!</span>

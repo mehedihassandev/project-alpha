@@ -175,6 +175,15 @@
     },
     {
       "name": "Tailwind CSS"
+    },
+    {
+      "name": "Bootstrap"
+    },
+    {
+      "name": "Three JS"
+    },
+    {
+      "name": "Frame Motion"
     }
   ]
 }

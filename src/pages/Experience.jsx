@@ -9,7 +9,7 @@ export const Experience = () => {
   const { experiencesData } = data;
 
   return (
-    <div className="w-full h-full grid grid-cols items-center pl-10 lg:pl-14 xl:pl-14 overflow-auto p-5 lg:p-10 xl:p-20">
+    <div className="w-full h-full grid grid-cols items-center px-10 lg:px-14 xl:px-14 overflow-auto">
       <div className="max-w-screen-2xl py-6 lg:py-10">
         <h1 className="text-3xl font-semibold text-white font-saira pb-5 pl-5 lg:pl-0">
           <span className="text-secondary">02.1.</span> Experience
