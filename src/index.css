@@ -19,3 +19,10 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #19e684;
 } */
+
+.custom-text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px #19e684;
+    position: relative;
+    overflow: hidden;
+}
