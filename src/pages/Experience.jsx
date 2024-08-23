@@ -16,7 +16,7 @@ export const Experience = () => {
         </h1>
 
         <div className="w-full pt-5">
-          <div className="px-0 lg:px-5">
+          <div className="px-0 lg:px-2">
             <div className="grid gap-4 mx-0 lg:mx-4 grid-cols-1">
               <div className="relative px-0 lg:px-4 space-y-6">
                 <div className="space-y-12 relative px-4 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">

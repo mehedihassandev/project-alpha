@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { Menu } from "./Menu";
 
 export const Layout = ({ children }) => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showSidebar, setShowSidebar] = useState(false);
 
-  const handleMouseMove = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
+  // const handleMouseMove = (e) => {
+  //   setMousePosition({ x: e.clientX, y: e.clientY });
+  // };
 
-  useEffect(() => {
-    document.addEventListener("mousemove", handleMouseMove);
+  // useEffect(() => {
+  //   document.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
 
 
   return (
     <div className="flex bg-primary text-white">
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: 0,
@@ -35,7 +35,7 @@ export const Layout = ({ children }) => {
           background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent, #0f172a22 10%, #0f172a08 20%, #0f172a0b 30%)`,
           pointerEvents: "none",
         }}
-      ></div>
+      ></div> */}
 
       <motion.button
         className="absolute top-6 left-6 z-50 text-white lg:hidden"

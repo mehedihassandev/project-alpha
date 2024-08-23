@@ -3,6 +3,7 @@ export const ROUTES = {
     ABOUT: "/about",
     EXPERIENCE: "/experience",
     PROJECT: "/project",
+    CONTACT: "/contact",
 };
 
 export const LINK = {
@@ -10,4 +11,5 @@ export const LINK = {
     ABOUT: "/about",
     EXPERIENCE: "/experience",
     PROJECT: "/project",
+    CONTACT: "/contact",
 };

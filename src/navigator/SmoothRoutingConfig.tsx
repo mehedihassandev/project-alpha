@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
-import Loader from "../components/Loader";
+import { useLocation } from "react-router-dom";
+import { Loader } from "../components/Loader";
+import { Contact } from "../pages/Contact";
 
 const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../pages/About"));
@@ -33,6 +34,9 @@ export const SmoothRoutingConfig = () => {
                 </div>
                 <div id="project">
                     <Projects />
+                </div>
+                <div id="contact">
+                    <Contact />
                 </div>
             </div>
         </Suspense>
