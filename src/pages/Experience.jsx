@@ -9,14 +9,14 @@ export const Experience = () => {
   const { experiencesData } = data;
 
   return (
-    <div className="w-full h-screen grid grid-cols items-center pl-10 lg:pl-14 xl:pl-14 overflow-auto p-5 lg:p-10 xl:p-20">
+    <div className="w-full h-full grid grid-cols items-center px-10 lg:px-14 xl:px-14 overflow-auto">
       <div className="max-w-screen-2xl py-6 lg:py-10">
         <h1 className="text-3xl font-semibold text-white font-saira pb-5 pl-5 lg:pl-0">
           <span className="text-secondary">02.1.</span> Experience
         </h1>
 
         <div className="w-full pt-5">
-          <div className="px-0 lg:px-5">
+          <div className="px-0 lg:px-2">
             <div className="grid gap-4 mx-0 lg:mx-4 grid-cols-1">
               <div className="relative px-0 lg:px-4 space-y-6">
                 <div className="space-y-12 relative px-4 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">

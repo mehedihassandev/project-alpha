@@ -8,32 +8,45 @@ export const Menu = ({ setShowSidebar }) => {
     const location = useLocation();
 
     return (
-        <div>
+        <nav className="mt-10">
             {menus.map((item, index) => (
                 <NavLink
                     to={item.path}
                     key={index}
-                    className={`flex items-center hover:text-secondary text-[#94A3B8] py-[10px] px-[10px] gap-[15px] transition-all duration-500`}
+                    className={({ isActive }) =>
+                        `flex items-center py-[10px] px-[10px] gap-[15px] transition-all duration-500 ${
+                            isActive
+                                ? "text-secondary font-semibold"
+                                : "text-[#94A3B8]"
+                        } hover:text-secondary`
+                    }
                     onClick={() => setShowSidebar(false)}
                 >
-                    <motion.div>{iconHash[item.icon]}</motion.div>
-                    <motion.div
-                        className="text-[1rem] font-poppins"
-                        whileHover={{
-                            scale: location.pathname !== item.path ? 1.2 : 1,
-                            transform:
-                                location.pathname !== item.path
-                                    ? "translateX(10px)"
-                                    : "translateX(0px)",
-                            transition: { duration: 0.2 },
-                            color: "text-secondary",
-                        }}
-                    >
-                        {item.name}
-                    </motion.div>
+                    {({ isActive }) => (
+                        <div className="flex items-center gap-[15px]">
+                            {iconHash[item.icon]}
+                            <motion.span
+                                className="text-[1rem] font-poppins"
+                                whileHover={{
+                                    scale: 1.05,
+                                    transform: "translateX(10px)",
+                                    transition: { duration: 0.2 },
+                                }}
+                                animate={
+                                    isActive
+                                        ? {
+                                              transform: "translateX(10px)",
+                                          }
+                                        : {}
+                                }
+                            >
+                                {item.name}
+                            </motion.span>
+                        </div>
+                    )}
                 </NavLink>
             ))}
-        </div>
+        </nav>
     );
 };
 

@@ -13,12 +13,18 @@ export const menus = [
     },
     {
         path: ROUTES.EXPERIENCE,
-        name: "Education & Experience",
+        // name: "Education & Experience",
+        name: "Experience",
         icon: "dash",
     },
     {
         path: ROUTES.PROJECT,
         name: "Project",
+        icon: "dash",
+    },
+    {
+        path: ROUTES.CONTACT,
+        name: "Contact",
         icon: "dash",
     },
 ];
