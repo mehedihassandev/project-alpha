@@ -10,6 +10,7 @@ export const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [cursorTransition, setCursorTransition] = useState('');
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -17,16 +18,18 @@ export const Layout = ({ children }) => {
     };
 
     const handleMouseOver = (e) => {
-      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG'];
+      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
       if (tags.includes(e.target.tagName)) {
         setIsHovering(true);
+        setCursorTransition('transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out'); // Set transition when hovering
       }
     };
 
     const handleMouseOut = (e) => {
-      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG'];
+      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
       if (tags.includes(e.target.tagName)) {
         setIsHovering(false);
+        setCursorTransition('transform 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out'); // Set transition when not hovering
       }
     };
 
@@ -89,14 +92,14 @@ export const Layout = ({ children }) => {
           left: `${cursorPosition.x}px`,
           top: `${cursorPosition.y}px`,
           position: "fixed",
-          width: "25px",
-          height: "25px",
+          width: "20px",
+          height: "20px",
           backgroundColor: "#fff",
           borderRadius: "50%",
           pointerEvents: "none",
           zIndex: 9999,
-          transition: "transform 0.2s ease-in-out",
-          transform: isHovering ? "scale(3.5)" : "scale(1)",
+          transition: cursorTransition,
+          transform: `translate(-50%, -50%) ${isHovering ? "scale(4)" : "scale(1)"}`,
           mixBlendMode: "difference",
         }}
       />
