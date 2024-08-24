@@ -8,11 +8,11 @@ body {
 }
 
 /* Hide the cursor on larger screens */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     body {
         cursor: none;
     }
-}
+} */
 
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
