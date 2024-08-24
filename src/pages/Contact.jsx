@@ -89,8 +89,8 @@ export const Contact = () => {
                 </div>
             </div>
 
-            <div className="box">
-                <div className=" w-full px-8 py-5 pb-10 mx-auto overflow-hidden bg-primary">
+            <div className="box rounded-xl">
+                <div className=" w-full px-8 py-5 pb-10 mx-auto overflow-hidden bg-primary rounded-xl">
                     <form className="mt-4 w-full">
                         <div className="flex-1">
                             <label className="block mb-2 text-md text-textColor font-syne">
