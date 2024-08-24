@@ -67,19 +67,22 @@ export const Projects = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-3 pt-3">
                   {item.links.map((link, linkIndex) => (
-                    <motion.a
+                    <motion.button
                       key={linkIndex}
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
-                      whileHover={{
+                      className={`w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium disabled:bg-gray-400`}
+                      whileHover={link.url ? {
                         scale: 1.05,
                         boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
+                      } : {}}
+                      onClick={() => {
+                        if (link.url) {
+                          window.open(link.url, '_blank', 'noreferrer');
+                        }
                       }}
+                      disabled={!link.url}
                     >
                       {link.title}
-                    </motion.a>
+                    </motion.button>
                   ))}
                 </div>
               </div>
