@@ -62,7 +62,7 @@ export const Experience = () => {
                           (skill, index) => (
                             <motion.div
                               key={index}
-                              className="w-32 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium"
+                              className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium"
                               whileHover={{
                                 scale: 1.05,
                                 boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,

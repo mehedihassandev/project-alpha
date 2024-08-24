@@ -4,7 +4,7 @@ export const Contact = () => {
         window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mh.web.mehedihassan@gmail.com', '_blank');
     };
     return (
-        <section className="max-w-screen-2xl h-screen grid grid-cols-2 items-center justify-around px-20 py-10">
+        <section className="max-w-screen-2xl h-full lg:h-screen grid grid-cols-1 lg:grid-cols-2 items-center justify-around px-14 py-10 gap-5">
             <div className="text-textColor">
                 <h1 className="text-2xl font-semibold capitalize lg:text-3xl font-poppins">
                     Let&apos;s get in touch?
