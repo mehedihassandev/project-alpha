@@ -2,7 +2,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import data from "../../data.json";
 
 export const Experience = () => {
-  const { experiencesData } = data;
+  const { experiences } = data;
 
   return (
     <div className="w-full h-full grid grid-cols items-center px-10 lg:px-14 xl:px-14 overflow-auto">
@@ -16,7 +16,7 @@ export const Experience = () => {
             <div className="grid gap-4 mx-0 lg:mx-4 grid-cols-1">
               <div className="relative px-0 lg:px-4 space-y-6">
                 <div className="space-y-12 relative px-4 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
-                  {experiencesData.map((exp) => (
+                  {experiences.map((exp) => (
                     <div
                       key={exp.id}
                       className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-white hover:before:bg-secondary"
@@ -25,7 +25,7 @@ export const Experience = () => {
                         {exp.date}
                       </time>
                       <h3 className="text-xl text-white font-syne">
-                        <span className="font-semibold">
+                        <span className="font-semibold font-saira">
                           {exp.title}
                         </span>
                         | {exp.position}
@@ -46,7 +46,7 @@ export const Experience = () => {
                             key={index}
                             className="pt-5 text-textColor text-lg leading-6 font-syne"
                           >
-                            <span className="text-secondary">
+                            <span className="text-secondary font-semibold font-saira">
                               {highlight.title}
                             </span>
                             {highlight.detail}

@@ -1,12 +1,18 @@
+import { iconHash } from "../../utils/icon/icons";
+import data from "../../data.json";
+
 export const Contact = () => {
+    const { contacts } = data;
+
     const handleMailToClick = (e) => {
         e.preventDefault();
         window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mh.web.mehedihassan@gmail.com', '_blank');
     };
+
     return (
         <section className="max-w-screen-2xl h-full lg:h-screen grid grid-cols-1 lg:grid-cols-2 items-center justify-around px-14 py-10 gap-5">
             <div className="text-textColor">
-                <h1 className="text-2xl font-semibold capitalize lg:text-3xl font-poppins">
+                <h1 className="text-2xl font-semibold capitalize lg:text-3xl font-saira">
                     Let&apos;s get in touch?
                 </h1>
 
@@ -14,78 +20,19 @@ export const Contact = () => {
                     Ready to collaborate or chat about web development? I’m always open to connecting with fellow developers and enthusiasts. Feel free to reach out!
                 </p>
 
+
                 <div className="mt-6 space-y-8 md:mt-8">
-                    <p className="flex items-start -mx-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6 mx-2 text-secondary"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                            />
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                            />
-                        </svg>
-
-                        <span className="mx-2 text-textColor font-syne truncate w-72 text-md">
-                            Dhaka, Bangladesh
-                        </span>
-                    </p>
-
-                    <p className="flex items-start -mx-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6 mx-2 text-secondary"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                            />
-                        </svg>
-
-                        <span className="mx-2 truncate w-72 text-textColor font-syne text-md">
-                            (+880) 1571345727
-                        </span>
-                    </p>
-
-                    <p className="flex items-start -mx-2">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6 mx-2 text-secondary"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                            />
-                        </svg>
-
-                        <a
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=mh.web.mehedihassan@gmail.com"
-                            className="mx-2 truncate w-72 text-textColor font-syne text-md"
-                            onClick={handleMailToClick}
-                        >
-                            mh.web.mehedihassan@gmail.com
-                        </a>
-                    </p>
+                    {contacts.map((item, index) => (
+                        <div key={index} className="flex items-center ml-2 gap-2 text-secondary">
+                            {iconHash[item.icon]}
+                            <h2
+                                className={`mx-2 text-textColor font-syne text-md ${item.isLink && 'cursor-pointer'}`}
+                                onClick={handleMailToClick}
+                            >
+                                {item.text}
+                            </h2>
+                        </div>
+                    ))}
                 </div>
             </div>
 

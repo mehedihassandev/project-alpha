@@ -1,5 +1,5 @@
 {
-  "educationData": [
+  "education": [
     {
       "timePeriod": "Jan 2020 - Present",
       "institution": "Bangladesh University, Dhaka",
@@ -31,7 +31,7 @@
       "result": "First Division"
     }
   ],
-  "experiencesData": [
+  "experiences": [
     {
       "id": 1,
       "date": "June 2023 - Present",
@@ -274,6 +274,23 @@
     },
     {
       "name": "Frame Motion"
+    }
+  ],
+  "contacts": [
+    {
+      "icon": "location",
+      "text": "Dhaka, Bangladesh",
+      "isLink": false
+    },
+    {
+      "icon": "phone",
+      "text": "(+880) 1571345727",
+      "isLink": false
+    },
+    {
+      "icon": "mail",
+      "text": "mh.web.mehedihassan@gmail.com",
+      "isLink": true
     }
   ]
 }
