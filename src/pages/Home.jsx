@@ -16,7 +16,7 @@ export const Home = () => {
           <img
             src="../assets/me.jpg"
             alt="about"
-            className="w-[450px] h-auto overflow-hidden"
+            className="w-[450px] h-auto overflow-hidden box"
             style={{ filter: "grayscale(100%)" }}
             onError={(e) => {
               e.target.onerror = null;
@@ -37,7 +37,7 @@ export const Home = () => {
       </div>
 
 
-      <div className="hidden xl:block">
+      {/* <div className="hidden xl:block">
         <motion.img
           src="../assets/me.jpg"
           alt="about"
@@ -54,7 +54,52 @@ export const Home = () => {
             e.target.src = "https://i.ibb.co/dKxMcmd/me.jpg";
           }}
         />
+      </div> */}
+
+      {/* <div className="relative rounded-lg bg-animation">
+        <div className="rounded-lg z-50 relative p-1">
+          <div className="hidden xl:block">
+            <motion.img
+              src="../assets/me.jpg"
+              alt="about"
+              className="w-[450px] h-auto"
+              style={{ filter: "grayscale(100%)" }}
+              animate={{ filter: "grayscale(100%)" }}
+              whileHover={{
+                filter: "contrast(130%)",
+                transform: "translateY(-10px) translateX(-10px)",
+                boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
+              }}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "https://i.ibb.co/dKxMcmd/me.jpg";
+              }}
+            />
+          </div>
+        </div>
+      </div> */}
+
+      <div className="hidden xl:block">
+        <div className="box">
+          <motion.img
+            src="../assets/me.jpg"
+            alt="about"
+            className="w-[450px] h-auto"
+            style={{ filter: "grayscale(100%)" }}
+            animate={{ filter: "grayscale(100%)" }}
+            whileHover={{
+              filter: "contrast(130%)",
+              transform: "translateY(-10px) translateX(-10px)",
+              boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
+            }}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "https://i.ibb.co/dKxMcmd/me.jpg";
+            }}
+          />
+        </div>
       </div>
+
     </div>
   );
 };

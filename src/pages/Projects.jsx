@@ -24,9 +24,9 @@ export const Projects = () => {
                 <motion.img
                   src={item.imgSrc}
                   alt="about"
-                  className="w-full h-auto"
-                  style={{ filter: "grayscale(100%)" }}
-                  animate={{ filter: "grayscale(100%)" }}
+                  className="w-full h-auto box"
+                  style={{ filter: "grayscale(50%)" }}
+                  animate={{ filter: "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
@@ -89,9 +89,9 @@ export const Projects = () => {
                 <motion.img
                   src={item.imgSrc}
                   alt="about"
-                  className="w-full h-auto"
-                  style={{ filter: "grayscale(100%)" }}
-                  animate={{ filter: "grayscale(100%)" }}
+                  className="w-full h-auto box"
+                  style={{ filter: "grayscale(50%)" }}
+                  animate={{ filter: "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
