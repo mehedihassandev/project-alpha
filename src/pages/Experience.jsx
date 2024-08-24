@@ -1,11 +1,7 @@
-import { motion } from "framer-motion";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
-
+import { IoMdArrowDropright } from "react-icons/io";
 import data from "../../data.json";
 
 export const Experience = () => {
-  const theme = resolveConfig(tailwindConfig);
   const { experiencesData } = data;
 
   return (
@@ -57,19 +53,17 @@ export const Experience = () => {
                           </li>
                         )
                       )}
-                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 items-center gap-3 pt-5">
+                      <h3 className="mt-7 text-xl text-textColor font-syne font-bold">Using Technology</h3>
+                      <div className="flex items-center gap-14 pt-2">
                         {exp.skills.map(
                           (skill, index) => (
-                            <motion.button
+                            <h4
                               key={index}
-                              className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium"
-                              whileHover={{
-                                scale: 1.05,
-                                boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
-                              }}
+                              className="text-md text-secondary items-center justify-center flex cursor-pointer font-saira font-semibold"
                             >
+                              <IoMdArrowDropright className="text-xl" />
                               {skill}
-                            </motion.button>
+                            </h4>
                           )
                         )}
                       </div>

@@ -47,22 +47,15 @@ export const About = () => {
         <motion.h2 className="text-textColor font-syne py-4 text-xl">
           I&apos;ve recently been working with the following technologies:
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 pb-16 lg:pb-2">
+        <div className="grid grid-cols-1 lg:grid-cols-7 pb-16 lg:pb-2 gap-3">
           {skills.map((skill, index) => (
-            <div className="flex flex-col gap-2" key={index}>
-              <div className="flex items-center gap-2 text-secondary">
-                <IoMdArrowDropright className="text-lg" />
-                <motion.h2
-                  whileHover={{
-                    transform: "translateX(10px)",
-                    cursor: "pointer",
-                  }}
-                  className="font-syne text-lg text-textColor"
-                >
-                  {skill.name}
-                </motion.h2>
-              </div>
-            </div>
+            <h2
+              key={index}
+              className="text-md text-secondary items-center flex cursor-pointer font-saira font-semibold gap-2"
+            >
+              <IoMdArrowDropright className="text-xl" />
+              {skill.name}
+            </h2>
           ))}
         </div>
       </div>
