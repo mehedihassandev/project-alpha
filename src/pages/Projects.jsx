@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config";
 import data from '../../data.json';
+import { IoMdArrowDropright } from "react-icons/io";
 
 export const Projects = () => {
   const theme = resolveConfig(tailwindConfig);
@@ -24,9 +25,9 @@ export const Projects = () => {
                 <motion.img
                   src={item.imgSrc}
                   alt="about"
-                  className="w-full h-auto"
-                  style={{ filter: "grayscale(100%)" }}
-                  animate={{ filter: "grayscale(100%)" }}
+                  className="w-full h-auto box"
+                  style={{ filter: "grayscale(50%)" }}
+                  animate={{ filter: "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
@@ -39,47 +40,48 @@ export const Projects = () => {
               </div>
             )}
             <div>
-              <motion.h2 className="text-secondary text-xl font-syne pb-3">
+              <h2 className="text-secondary text-xl font-saira font-semibold pb-3">
                 {item.title}
-              </motion.h2>
-              <motion.p className="text-textColor text-lg leading-6 font-syne pb-3">
+              </h2>
+              <p className="text-textColor text-lg leading-6 font-syne pb-3">
                 {item.description}
-              </motion.p>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-3 pt-3">
+              </p>
+              <h3 className="mt-3 text-lg text-textColor font-syne font-medium">Using Technology</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-2 pt-3">
                 {item.technologies.map((tech, techIndex) => (
-                  <motion.button
+                  <h2
                     key={techIndex}
-                    className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
-                    whileHover={{
-                      scale: 1.05,
-                      boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
-                    }}
+                    className="text-md text-secondary items-center flex cursor-pointer font-saira font-semibold gap-1"
                   >
+                    <IoMdArrowDropright className="text-xl" />
                     {tech}
-                  </motion.button>
+                  </h2>
                 ))}
               </div>
 
-              <div className="pt-7">
-                <h3 className="text-textColor text-lg font-poppins pb-3">
+              <div className="mt-5">
+                <h3 className="text-textColor text-lg font-syne font-medium pb-1">
                   Links
                 </h3>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-3 pt-3">
                   {item.links.map((link, linkIndex) => (
-                    <motion.a
+                    <motion.button
                       key={linkIndex}
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
-                      whileHover={{
+                      className={`w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium disabled:bg-gray-400`}
+                      whileHover={link.url ? {
                         scale: 1.05,
                         boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
+                      } : {}}
+                      onClick={() => {
+                        if (link.url) {
+                          window.open(link.url, '_blank', 'noreferrer');
+                        }
                       }}
+                      disabled={!link.url}
                     >
                       {link.title}
-                    </motion.a>
+                    </motion.button>
                   ))}
                 </div>
               </div>
@@ -89,9 +91,9 @@ export const Projects = () => {
                 <motion.img
                   src={item.imgSrc}
                   alt="about"
-                  className="w-full h-auto"
-                  style={{ filter: "grayscale(100%)" }}
-                  animate={{ filter: "grayscale(100%)" }}
+                  className="w-full h-auto box"
+                  style={{ filter: "grayscale(50%)" }}
+                  animate={{ filter: "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,

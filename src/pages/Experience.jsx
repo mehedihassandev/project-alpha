@@ -1,12 +1,8 @@
-import { motion } from "framer-motion";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
-
+import { IoMdArrowDropright } from "react-icons/io";
 import data from "../../data.json";
 
 export const Experience = () => {
-  const theme = resolveConfig(tailwindConfig);
-  const { experiencesData } = data;
+  const { experiences } = data;
 
   return (
     <div className="w-full h-full grid grid-cols items-center px-10 lg:px-14 xl:px-14 overflow-auto">
@@ -20,7 +16,7 @@ export const Experience = () => {
             <div className="grid gap-4 mx-0 lg:mx-4 grid-cols-1">
               <div className="relative px-0 lg:px-4 space-y-6">
                 <div className="space-y-12 relative px-4 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
-                  {experiencesData.map((exp) => (
+                  {experiences.map((exp) => (
                     <div
                       key={exp.id}
                       className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-white hover:before:bg-secondary"
@@ -29,7 +25,7 @@ export const Experience = () => {
                         {exp.date}
                       </time>
                       <h3 className="text-xl text-white font-syne">
-                        <span className="font-semibold">
+                        <span className="font-semibold font-saira">
                           {exp.title}
                         </span>
                         | {exp.position}
@@ -50,26 +46,24 @@ export const Experience = () => {
                             key={index}
                             className="pt-5 text-textColor text-lg leading-6 font-syne"
                           >
-                            <span className="text-secondary">
+                            <span className="text-secondary font-semibold font-saira">
                               {highlight.title}
                             </span>
                             {highlight.detail}
                           </li>
                         )
                       )}
-                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 items-center gap-3 pt-5">
+                      <h3 className="mt-7 text-xl text-textColor font-syne font-bold">Using Technology</h3>
+                      <div className="flex items-center gap-14 pt-2">
                         {exp.skills.map(
                           (skill, index) => (
-                            <motion.button
+                            <h4
                               key={index}
-                              className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium"
-                              whileHover={{
-                                scale: 1.05,
-                                boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
-                              }}
+                              className="text-md text-secondary items-center justify-center flex cursor-pointer font-saira font-semibold"
                             >
+                              <IoMdArrowDropright className="text-xl" />
                               {skill}
-                            </motion.button>
+                            </h4>
                           )
                         )}
                       </div>

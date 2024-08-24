@@ -5,23 +5,33 @@ import { MdMenu, MdClose } from "react-icons/md";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { Menu } from "./Menu";
+import { CursorEffect } from "./CursorEffect";
 
 export const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [cursorTransition, setCursorTransition] = useState('');
+  const [isMoving, setIsMoving] = useState(false);
 
   useEffect(() => {
+    let mouseTimeout;
+
     const handleMouseMove = (e) => {
       setCursorPosition({ x: e.clientX, y: e.clientY });
+      setIsMoving(true);
+
+      clearTimeout(mouseTimeout);
+      mouseTimeout = setTimeout(() => {
+        setIsMoving(false);
+      }, 100);
     };
 
     const handleMouseOver = (e) => {
       const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
       if (tags.includes(e.target.tagName)) {
         setIsHovering(true);
-        setCursorTransition('transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out'); // Set transition when hovering
+        setCursorTransition('transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out');
       }
     };
 
@@ -29,7 +39,7 @@ export const Layout = ({ children }) => {
       const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
       if (tags.includes(e.target.tagName)) {
         setIsHovering(false);
-        setCursorTransition('transform 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out'); // Set transition when not hovering
+        setCursorTransition('transform 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out');
       }
     };
 
@@ -86,23 +96,30 @@ export const Layout = ({ children }) => {
       </main>
 
       {/* Custom Cursor */}
-      <div
-        className={`cursor-dot ${isHovering ? "hover-enhanced" : ""}`}
-        style={{
-          left: `${cursorPosition.x}px`,
-          top: `${cursorPosition.y}px`,
-          position: "fixed",
-          width: "20px",
-          height: "20px",
-          backgroundColor: "#fff",
-          borderRadius: "50%",
-          pointerEvents: "none",
-          zIndex: 9999,
-          transition: cursorTransition,
-          transform: `translate(-50%, -50%) ${isHovering ? "scale(4)" : "scale(1)"}`,
-          mixBlendMode: "difference",
-        }}
+      <CursorEffect
+        cursorPosition={cursorPosition}
+        width="10px"
+        height="10px"
+        backgroundColor="#fff"
+        transition={cursorTransition}
+        transform={`translate(-50%, -50%) ${isHovering ? "scale(9)" : "scale(1)"}`}
+        opacity={1}
+        zIndex={9999}
       />
+
+      {/* Larger Ring for Movement */}
+      {isMoving && !isHovering && (
+        <CursorEffect
+          cursorPosition={cursorPosition}
+          width="50px"
+          height="50px"
+          backgroundColor="rgba(255, 255, 255, 0.1)"
+          transform="translate(-50%, -50%)"
+          transition="transform 0.3s ease-out, opacity 0.3s ease-out"
+          opacity={isMoving && !isHovering ? 1 : 0}
+          zIndex={9998}
+        />
+      )}
     </div>
   );
 };
