@@ -1,42 +1,51 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
-import { useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { Menu } from "./Menu";
 
 export const Layout = ({ children }) => {
-  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showSidebar, setShowSidebar] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+  const [cursorTransition, setCursorTransition] = useState('');
 
-  // const handleMouseMove = (e) => {
-  //   setMousePosition({ x: e.clientX, y: e.clientY });
-  // };
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+    };
 
-  // useEffect(() => {
-  //   document.addEventListener("mousemove", handleMouseMove);
+    const handleMouseOver = (e) => {
+      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
+      if (tags.includes(e.target.tagName)) {
+        setIsHovering(true);
+        setCursorTransition('transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out'); // Set transition when hovering
+      }
+    };
 
-  //   return () => {
-  //     document.removeEventListener("mousemove", handleMouseMove);
-  //   };
-  // }, []);
+    const handleMouseOut = (e) => {
+      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
+      if (tags.includes(e.target.tagName)) {
+        setIsHovering(false);
+        setCursorTransition('transform 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out'); // Set transition when not hovering
+      }
+    };
 
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
+    };
+  }, []);
 
   return (
-    <div className="flex bg-primary text-white">
-      {/* <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100vh",
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, transparent, #0f172a22 10%, #0f172a08 20%, #0f172a0b 30%)`,
-          pointerEvents: "none",
-        }}
-      ></div> */}
-
+    <div className="relative flex bg-primary text-white">
       <motion.button
         className="absolute top-4 right-4 z-50 text-white lg:hidden"
         onClick={() => setShowSidebar(!showSidebar)}
@@ -63,6 +72,7 @@ export const Layout = ({ children }) => {
 
         <Footer />
       </div>
+
       <main className="w-full h-screen bg-primary overflow-auto relative">
         <img
           src="https://i.ibb.co/R7nJpLv/HI.png"
@@ -70,10 +80,29 @@ export const Layout = ({ children }) => {
           className="fixed w-[200px] h-[125px] lg:w-[350px] lg:h-[300px] top-1/2 left-1/3 lg:left-1/2 transform -translate-x-1/1 -translate-y-1/2 z-10 opacity-100"
           style={{ zIndex: 1 }}
         />
-        <div style={{ position: 'relative', zIndex: 2 }}>
+        <div style={{ position: "relative", zIndex: 2 }}>
           {children}
         </div>
       </main>
+
+      {/* Custom Cursor */}
+      <div
+        className={`cursor-dot ${isHovering ? "hover-enhanced" : ""}`}
+        style={{
+          left: `${cursorPosition.x}px`,
+          top: `${cursorPosition.y}px`,
+          position: "fixed",
+          width: "20px",
+          height: "20px",
+          backgroundColor: "#fff",
+          borderRadius: "50%",
+          pointerEvents: "none",
+          zIndex: 9999,
+          transition: cursorTransition,
+          transform: `translate(-50%, -50%) ${isHovering ? "scale(4)" : "scale(1)"}`,
+          mixBlendMode: "difference",
+        }}
+      />
     </div>
   );
 };
