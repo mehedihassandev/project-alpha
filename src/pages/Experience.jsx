@@ -36,17 +36,17 @@ export const Experience = () => {
                       </h3>
                       {exp.description.map(
                         (desc, index) => (
-                          <motion.p
+                          <p
                             key={index}
                             className="mt-2 text-textColor text-lg leading-6 font-syne"
                           >
                             {desc}
-                          </motion.p>
+                          </p>
                         )
                       )}
                       {exp.highlights.map(
                         (highlight, index) => (
-                          <motion.li
+                          <li
                             key={index}
                             className="pt-5 text-textColor text-lg leading-6 font-syne"
                           >
@@ -54,13 +54,13 @@ export const Experience = () => {
                               {highlight.title}
                             </span>
                             {highlight.detail}
-                          </motion.li>
+                          </li>
                         )
                       )}
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 items-center gap-3 pt-5">
                         {exp.skills.map(
                           (skill, index) => (
-                            <motion.div
+                            <motion.button
                               key={index}
                               className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium"
                               whileHover={{
@@ -69,7 +69,7 @@ export const Experience = () => {
                               }}
                             >
                               {skill}
-                            </motion.div>
+                            </motion.button>
                           )
                         )}
                       </div>

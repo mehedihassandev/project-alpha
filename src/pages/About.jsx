@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 import { IoMdArrowDropright } from "react-icons/io";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
 import data from "../../data.json";
 
 export const About = () => {
-  const theme = resolveConfig(tailwindConfig);
   const { skills } = data;
 
   return (
@@ -57,7 +54,6 @@ export const About = () => {
                 <IoMdArrowDropright className="text-lg" />
                 <motion.h2
                   whileHover={{
-                    color: theme.theme.colors.secondary,
                     transform: "translateX(10px)",
                     cursor: "pointer",
                   }}

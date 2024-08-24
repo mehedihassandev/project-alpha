@@ -47,7 +47,7 @@ export const Projects = () => {
               </motion.p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-3 pt-3">
                 {item.technologies.map((tech, techIndex) => (
-                  <motion.div
+                  <motion.button
                     key={techIndex}
                     className="w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium"
                     whileHover={{
@@ -56,7 +56,7 @@ export const Projects = () => {
                     }}
                   >
                     {tech}
-                  </motion.div>
+                  </motion.button>
                 ))}
               </div>
 

@@ -17,8 +17,8 @@ export const Menu = ({ setShowSidebar }) => {
                         `flex items-center py-[10px] px-[10px] gap-[15px] transition-all duration-500 ${
                             isActive
                                 ? "text-secondary font-semibold"
-                                : "text-[#94A3B8]"
-                        } hover:text-secondary`
+                                : "text-textColor"
+                        }`
                     }
                     onClick={() => setShowSidebar(false)}
                 >
