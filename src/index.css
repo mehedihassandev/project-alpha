@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide the cursor on larger screens */
+@media (min-width: 768px) {
+    body {
+        cursor: none;
+    }
+}
+
 /* Custom Scrollbar Styles */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 4px;
 }
 
@@ -18,7 +30,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #19e684;
-} */
+}
 
 .custom-text-stroke {
     color: transparent;
