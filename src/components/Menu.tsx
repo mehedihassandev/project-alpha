@@ -26,7 +26,7 @@ export const Menu = ({ setShowSidebar }) => {
                         <div className="flex items-center gap-[15px]">
                             {iconHash[item.icon]}
                             <motion.span
-                                className="text-[1rem] font-poppins"
+                                className="text-[1rem] font-saira"
                                 whileHover={{
                                     scale: 1.05,
                                     transform: "translateX(10px)",

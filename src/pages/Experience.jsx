@@ -15,7 +15,7 @@ export const Experience = () => {
           <div className="px-0 lg:px-2">
             <div className="grid gap-4 mx-0 lg:mx-4 grid-cols-1">
               <div className="relative px-0 lg:px-4 space-y-6">
-                <div className="space-y-12 relative px-4 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
+                <div className="space-y-12 relative px-4 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
                   {experiences.map((exp) => (
                     <div
                       key={exp.id}
@@ -25,7 +25,7 @@ export const Experience = () => {
                         {exp.date}
                       </time>
                       <h3 className="text-xl text-white font-syne">
-                        <span className="font-semibold font-saira">
+                        <span className="font-semibold font-saira text-secondary">
                           {exp.title}
                         </span>
                         | {exp.position}
@@ -53,13 +53,13 @@ export const Experience = () => {
                           </li>
                         )
                       )}
-                      <h3 className="mt-7 text-xl text-textColor font-syne font-bold">Using Technology</h3>
-                      <div className="flex items-center gap-14 pt-2">
+                      <h3 className="mt-7 text-lg text-textColor font-saira font-semibold">Using Technology</h3>
+                      <div className="grid grid-cols-2 lg:grid-cols-7 pb-16 lg:pb-2 items-center gap-3 pt-7 lg:pt-2">
                         {exp.skills.map(
                           (skill, index) => (
                             <h4
                               key={index}
-                              className="text-md text-secondary items-center justify-center flex cursor-pointer font-saira font-semibold"
+                              className="text-md text-secondary items-center  flex cursor-pointer font-saira font-semibold"
                             >
                               <IoMdArrowDropright className="text-xl" />
                               {skill}
@@ -77,7 +77,7 @@ export const Experience = () => {
       </div>
 
       {/* <div className="pt-5">
-        <h1 className="text-2xl font-semibold text-white font-mono pb-5">
+        <h1 className="text-2xl font-semibold text-white font-saira pb-5">
           <span className="text-secondary">02.2.</span> Education
         </h1>
 
@@ -91,7 +91,7 @@ export const Experience = () => {
                       key={index}
                       className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-white hover:before:bg-secondary"
                     >
-                      <time className="text-[.65rem] font-mono uppercase text-white">
+                      <time className="text-[.65rem] font-saira uppercase text-white">
                         {item.timePeriod}
                       </time>
                       <h3 className="text-[1rem] text-white">

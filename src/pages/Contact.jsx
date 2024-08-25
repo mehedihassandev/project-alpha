@@ -40,7 +40,7 @@ export const Contact = () => {
                 <div className=" w-full px-8 py-5 pb-10 mx-auto overflow-hidden bg-primary rounded-xl">
                     <form className="mt-4 w-full">
                         <div className="flex-1">
-                            <label className="block mb-2 text-md text-textColor font-syne">
+                            <label className="block mb-2 text-md text-textColor font-saira">
                                 Full Name
                             </label>
                             <input
@@ -50,7 +50,7 @@ export const Contact = () => {
                             />
                         </div>
                         <div className="flex-1 mt-6">
-                            <label className="block mb-2 text-md text-textColor font-syne">
+                            <label className="block mb-2 text-md text-textColor font-saira">
                                 Email address
                             </label>
                             <input
@@ -60,7 +60,7 @@ export const Contact = () => {
                             />
                         </div>
                         <div className="w-full mt-6">
-                            <label className="block mb-2 text-md text-textColor font-syne">
+                            <label className="block mb-2 text-md text-textColor font-saira">
                                 Message
                             </label>
                             <textarea
@@ -68,7 +68,7 @@ export const Contact = () => {
                                 placeholder="Message"
                             ></textarea>
                         </div>
-                        <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-black capitalize transition-colors duration-300 transform bg-secondary rounded-md hover:bg-primary hover:text-white focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50 font-poppins">
+                        <button className="w-full px-6 py-3 mt-6 text-md font-medium tracking-wide text-black capitalize transition-colors duration-300 transform bg-secondary rounded-md hover:bg-primary hover:text-white focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50 font-saira">
                             get in touch
                         </button>
                     </form>

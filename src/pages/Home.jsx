@@ -29,9 +29,9 @@ export const Home = () => {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 justify-between gap-7 items-center mt-7 lg:mt-16 xl:mt-24">
-          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-secondary font-poppins leading-3 xl:leading-9 font-semibold">2 + <br /> <span className="text-lg lg:text-lg text-white font-normal">Years of Experience</span></h2>
-          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-secondary font-poppins leading-3 xl:leading-9 font-semibold">150+ <br /> <span className="text-lg lg:text-lg text-white font-normal">Projects completed</span></h2>
-          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-secondary font-poppins leading-3 xl:leading-9 font-semibold">100% <br /> <span className="text-lg lg:text-lg text-white font-normal">Client Satisfactions</span></h2>
+          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-secondary font-saira leading-3 xl:leading-9 font-semibold">2 + <br /> <span className="text-lg lg:text-lg text-white font-normal font-syne">Years of Experience</span></h2>
+          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-secondary font-saira leading-3 xl:leading-9 font-semibold">150+ <br /> <span className="text-lg lg:text-lg text-white font-normal font-syne">Projects completed</span></h2>
+          <h2 className="text-2xl lg:text-3xl xl:text-5xl text-secondary font-saira leading-3 xl:leading-9 font-semibold">100% <br /> <span className="text-lg lg:text-lg text-white font-normal font-syne">Client Satisfactions</span></h2>
         </div>
       </div>
 

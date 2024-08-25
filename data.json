@@ -225,23 +225,23 @@
   "socialLinks": [
     {
       "href": "https://github.com/mehedihassandev",
-      "imgSrc": "https://i.ibb.co/k3pJnxH/github-1.png"
+      "icon": "github"
     },
     {
       "href": "https://www.linkedin.com/in/mdmehedihassandev/",
-      "imgSrc": "https://i.ibb.co/68g55qP/linkedin-1.png"
+      "icon": "linkedin"
     },
     {
       "href": "https://wa.me/8801571345727",
-      "imgSrc": "https://i.ibb.co/sWPQ4CX/whatsapp-1.png"
+      "icon": "whatsapp"
     },
     {
       "href": "https://www.facebook.com/mdmehedihassan.dev/",
-      "imgSrc": "https://i.ibb.co/B3frH4t/facebook-3-1.png"
+      "icon": "facebook"
     },
     {
       "href": "https://www.instagram.com/mdmehedihassan.dev/",
-      "imgSrc": "https://i.ibb.co/M2b5nRf/instagram-2-1.png"
+      "icon": "instagram"
     }
   ],
   "skills": [

@@ -3,8 +3,8 @@ export const Header = () => {
     <div className="py-6">
       {/* <p className="text-sm text-secondary pb-1 ">Hi, my name is</p> */}
       {/* <img src="https://i.ibb.co/dKxMcmd/me.jpg" alt="Md. Mehedi Hassan" className="w-[424px] h-[500px] rounded-xl mb-8" /> */}
-      <h1 className="text-4xl pb-2 font-saira">Md. Mehedi Hassan</h1>
-      <p className="text-lg font-poppins">Junior Frontend Engineer</p>
+      <h1 className="text-4xl font-saira font-semibold">Md. <span className="text-secondary">Mehedi</span> Hassan</h1>
+      <p className="text-lg font-syne">Junior Frontend Engineer</p>
 
 
       {/* <motion.p

@@ -46,7 +46,7 @@ export const Projects = () => {
               <p className="text-textColor text-lg leading-6 font-syne pb-3">
                 {item.description}
               </p>
-              <h3 className="mt-3 text-lg text-textColor font-syne font-medium">Using Technology</h3>
+              <h3 className="mt-3 text-lg text-textColor font-saira font-medium">Using Technology</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-2 pt-3">
                 {item.technologies.map((tech, techIndex) => (
                   <h2
@@ -60,7 +60,7 @@ export const Projects = () => {
               </div>
 
               <div className="mt-5">
-                <h3 className="text-textColor text-lg font-syne font-medium pb-1">
+                <h3 className="text-textColor text-lg font-saira font-medium pb-1">
                   Links
                 </h3>
 
@@ -68,7 +68,7 @@ export const Projects = () => {
                   {item.links.map((link, linkIndex) => (
                     <motion.button
                       key={linkIndex}
-                      className={`w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-poppins font-medium disabled:bg-gray-400`}
+                      className={`w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium disabled:bg-gray-400`}
                       whileHover={link.url ? {
                         scale: 1.05,
                         boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
