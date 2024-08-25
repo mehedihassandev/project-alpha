@@ -47,7 +47,7 @@ export const About = () => {
         <motion.h2 className="text-textColor font-syne py-4 text-xl">
           I&apos;ve recently been working with the following technologies:
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-7 pb-16 lg:pb-2 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-7 pb-16 lg:pb-2 gap-3">
           {skills.map((skill, index) => (
             <h2
               key={index}
