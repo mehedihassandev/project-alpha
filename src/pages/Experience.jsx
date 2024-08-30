@@ -50,6 +50,18 @@ export const Experience = () => {
                               {highlight.title}
                             </span>
                             {highlight.detail}
+                            {highlight.additionalDetail && highlight.additionalDetail.length > 0 && (
+                              <div className="text-textColor font-syne mt-1">
+                                {highlight.additionalDetail.map(
+                                  (point, index) => (
+                                    <p key={index} className="pt-2">
+                                      {point}
+                                    </p>
+                                  )
+                                )}
+                              </div>
+                            )}
+
                           </li>
                         )
                       )}
