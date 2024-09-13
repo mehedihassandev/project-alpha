@@ -29,15 +29,15 @@ export const About = () => {
           </motion.p>
 
           <motion.p className="text-lg font-syne text-textColor pb-4">
-            I am <span className="font-medium text-secondary">committed</span>, to lifelong<span className="font-medium text-secondary"> learning</span> and actively immerse myself in the <span className="font-medium text-secondary">rapidly evolving field of technology</span>, eagerly picking up new
-            techniques and frameworks. Accepting challenges, <span className="font-medium text-secondary">I enjoy learning
-              new skills and developing</span> my repertoire since I have an unquenchable
+            I am committed, to lifelong learning and actively immerse myself in the rapidly evolving field of technology, eagerly picking up new
+            techniques and frameworks. Accepting challenges, I enjoy learning
+            new skills and developing my repertoire since I have an unquenchable
             curiosity to become proficient with cutting-edge tools and remain on
-            the <span className="font-medium text-secondary">cutting edge of web development innovation</span>.
+            the cutting edge of web development innovation.
           </motion.p>
 
           <motion.p className="pb-4 text-lg font-syne text-textColor">
-            In addition to my work in React, I have also ventured into <span className="font-medium text-secondary">mobile development</span> with <span className="font-medium text-secondary">React Native</span>. I played a key role in developing a <span className="font-medium text-secondary">MyCare app</span>, which enables users to perform essential tasks such as<span className="font-medium text-secondary"> top-up</span>,<span className="font-medium text-secondary"> bill payments</span> and <span className="font-medium text-secondary"> more</span>. This experience allowed me to extend my expertise beyond web development, embracing the unique challenges and opportunities presented by<span className="font-medium text-secondary"> mobile app development</span>.
+            In addition to my work in React, I have also ventured into mobile development with <span className="font-medium text-secondary">React Native</span>. I played a key role in developing a <span className="font-medium text-secondary">MyCare app</span>, which enables users to perform essential tasks such as<span className="font-medium text-secondary"> top-up</span>,<span className="font-medium text-secondary"> bill payments</span> and <span className="font-medium text-secondary"> more</span>. This experience allowed me to extend my expertise beyond web development, embracing the unique challenges and opportunities presented by mobile app development.
           </motion.p>
 
           <motion.p className="pb-4 text-lg font-syne text-textColor">
@@ -51,7 +51,7 @@ export const About = () => {
           {skills.map((skill, index) => (
             <h2
               key={index}
-              className="text-md text-secondary items-center flex cursor-pointer font-saira font-semibold gap-2"
+              className="text-md text-textColor items-center flex cursor-pointer font-saira font-semibold gap-2"
             >
               <IoMdArrowDropright className="text-xl" />
               {skill.name}

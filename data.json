@@ -106,27 +106,6 @@
     },
     {
       "id": 2,
-      "title": "EXOS Systems Ltd",
-      "description": "This project is a modern, responsive website for a EXOS System Ltd, designed to showcase services, portfolio, and company information. The website is built using Tailwind CSS for a utility-first approach to styling, and Vanilla JavaScript for dynamic interactions. The project setup uses Vite, ensuring a fast and efficient development environment with lightning-quick hot module reloading (HMR) and optimized builds.",
-      "technologies": [
-        "JavaScript",
-        "Tailwind CSS"
-      ],
-      "imgSrc": "../../src/assets/exos_web.gif",
-      "errorImgSrc": "https://i.ibb.co/T4ZywnY/screen-capture4-ezgif-com-video-to-gif-converter.gif",
-      "links": [
-        {
-          "title": "GitHub",
-          "url": ""
-        },
-        {
-          "title": "Live",
-          "url": "https://www.exos-systems.com/"
-        }
-      ]
-    },
-    {
-      "id": 3,
       "title": "T-Shirt Customization",
       "description": "This is the t-shirt customization project. Using this site you can design your t-shirt as you want. You can change the color, logo, structure and many more things. This is a very interesting project. I hope you will enjoy it.",
       "technologies": [
@@ -152,7 +131,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Portfolio Project",
       "description": "This is the portfolio project. When I built this app I was a beginner in Frame Motion, Three JS and Maath. I learned a lot of things from this project. I hope you will enjoy it. I will be happy if you give me some feedback about this project. I will try to improve it. Thank you.",
       "technologies": [
@@ -177,7 +156,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Movie Site",
       "description": "This is the movie site project. Using this site you can see the latest movies. You can see the movie details, rating, review and many more things. There I use free API to get movie list. I hope you will enjoy it.",
       "technologies": [
@@ -201,7 +180,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "CRUD Operation",
       "description": "This is the CRUD operation project. Using this site you can create, read, update and delete the data. There I use free API to get data and update the data. Also use JSON server to store the data. I hope you will enjoy it.",
       "technologies": [

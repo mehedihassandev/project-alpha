@@ -47,11 +47,11 @@ export const Projects = () => {
                 {item.description}
               </p>
               <h3 className="mt-3 text-lg text-textColor font-saira font-medium">Using Technology</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-2 pt-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-1 pt-3">
                 {item.technologies.map((tech, techIndex) => (
                   <h2
                     key={techIndex}
-                    className="text-md text-secondary items-center flex cursor-pointer font-saira font-semibold gap-1"
+                    className="text-md text-textColor items-center flex cursor-pointer font-saira font-semibold gap-1"
                   >
                     <IoMdArrowDropright className="text-xl" />
                     {tech}

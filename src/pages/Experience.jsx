@@ -66,12 +66,12 @@ export const Experience = () => {
                         )
                       )}
                       <h3 className="mt-7 text-lg text-textColor font-saira font-semibold">Using Technology</h3>
-                      <div className="grid grid-cols-2 lg:grid-cols-7 pb-16 lg:pb-2 items-center gap-3 pt-7 lg:pt-2">
+                      <div className="grid grid-cols-2 lg:grid-cols-7 pb-16 lg:pb-2 items-center gap-3 pt-7 lg:pt-5">
                         {exp.skills.map(
                           (skill, index) => (
                             <h4
                               key={index}
-                              className="text-md text-secondary items-center  flex cursor-pointer font-saira font-semibold"
+                              className="text-md text-textColor items-center  flex cursor-pointer font-saira font-semibold"
                             >
                               <IoMdArrowDropright className="text-xl" />
                               {skill}
