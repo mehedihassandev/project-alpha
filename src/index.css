@@ -45,7 +45,7 @@ body {
         #213 95%
     );
 
-    border: solid 3px transparent;
+    border: solid 2px transparent;
     --gradient-border: conic-gradient(
         from var(--border-angle),
         transparent 25%,

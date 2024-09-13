@@ -44,7 +44,11 @@
       "highlights": [
         {
           "title": "Point of Sale (POS) System",
-          "detail": ": With cutting-edge technology, our Point of Sale (POS) System redefines transactions. By seamlessly incorporating state-of-the-art technologies, it improves customer experiences, expedites processes, and boosts productivity, completely changing the retail environment for both customers and enterprises."
+          "detail": ": In my role, I contribute to the development of a robust POS system, employing Material UI, React.js, Redux, and Azure authentication to provide secure, scalable, and user-friendly solutions. Our NX monorepo architecture enables us to efficiently manage multiple applications within a single repository, streamlining development and maintenance processes.",
+          "additionalDetail": [
+            "I work closely on critical features such as payment management, billing, till management, branch summary, validation reports, and bulk payments. My efforts are focused on creating intuitive, dynamic interfaces while optimizing performance. I’ve also played a key role in designing global components that can be reused across various apps within the system, enhancing consistency and maintainability.",
+            "To streamline form handling, we implement useForm, ensuring efficient data management and validation across the system. My work is centered around delivering seamless transaction experiences, improving operational efficiency, and maintaining high standards of code quality and scalability."
+          ]
         },
         {
           "title": "Process Control Management (PCM) System",
@@ -102,27 +106,6 @@
     },
     {
       "id": 2,
-      "title": "EXOS Systems Ltd",
-      "description": "This project is a modern, responsive website for a EXOS System Ltd, designed to showcase services, portfolio, and company information. The website is built using Tailwind CSS for a utility-first approach to styling, and Vanilla JavaScript for dynamic interactions. The project setup uses Vite, ensuring a fast and efficient development environment with lightning-quick hot module reloading (HMR) and optimized builds.",
-      "technologies": [
-        "JavaScript",
-        "Tailwind CSS"
-      ],
-      "imgSrc": "../../src/assets/exos_web.gif",
-      "errorImgSrc": "https://i.ibb.co/T4ZywnY/screen-capture4-ezgif-com-video-to-gif-converter.gif",
-      "links": [
-        {
-          "title": "GitHub",
-          "url": ""
-        },
-        {
-          "title": "Live",
-          "url": "https://www.exos-systems.com/"
-        }
-      ]
-    },
-    {
-      "id": 3,
       "title": "T-Shirt Customization",
       "description": "This is the t-shirt customization project. Using this site you can design your t-shirt as you want. You can change the color, logo, structure and many more things. This is a very interesting project. I hope you will enjoy it.",
       "technologies": [
@@ -148,7 +131,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Portfolio Project",
       "description": "This is the portfolio project. When I built this app I was a beginner in Frame Motion, Three JS and Maath. I learned a lot of things from this project. I hope you will enjoy it. I will be happy if you give me some feedback about this project. I will try to improve it. Thank you.",
       "technologies": [
@@ -173,7 +156,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Movie Site",
       "description": "This is the movie site project. Using this site you can see the latest movies. You can see the movie details, rating, review and many more things. There I use free API to get movie list. I hope you will enjoy it.",
       "technologies": [
@@ -197,7 +180,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "CRUD Operation",
       "description": "This is the CRUD operation project. Using this site you can create, read, update and delete the data. There I use free API to get data and update the data. Also use JSON server to store the data. I hope you will enjoy it.",
       "technologies": [
