@@ -7,12 +7,12 @@ export const Home = () => {
 
   return (
     <section id="home">
-      <div className="w-full h-full lg:h-screen items-center px-7 lg:px-10 overflow-hidden grid grid-cols-3 gap-16 align-middle">
+      <div className="w-full h-full lg:h-screen items-center px-7 lg:px-10 overflow-hidden grid grid-cols-3 gap-2 align-middle">
         <div className="col-span-6 xl:col-span-2 py-8 lg:py-24 mt-2 lg:mt-32 xl:mt-0 px-5">
           <h1 className="text-xl lg:text-3xl xl:text-[38px] text-white leading-7 lg:leading-[35px] xl:leading-[55px] font-saira">
-            Maximize Your Business <span className="text-secondary font-bold underline">Potential</span> <br /> with Custom Web Development <br /> <span className="text-secondary font-bold underline">Solutions!</span>
+            Unlock Your Business <span className="text-secondary font-bold underline">Potential</span> with Tailored Web <span className="text-secondary font-bold underline">Solutions!</span>
           </h1>
-          <div className="block lg:hidden mt-8 ">
+          <div className="block lg:hidden mt-8">
             <img
               src="../assets/me.jpg"
               alt="about"

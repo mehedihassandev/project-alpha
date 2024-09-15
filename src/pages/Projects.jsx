@@ -64,11 +64,11 @@ export const Projects = () => {
                   Links
                 </h3>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-3 pt-3">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 pt-3">
                   {item.links.map((link, linkIndex) => (
                     <motion.button
                       key={linkIndex}
-                      className={`w-32 xl:w-36 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium disabled:bg-gray-400`}
+                      className={`w-24 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium disabled:bg-gray-400`}
                       whileHover={link.url ? {
                         scale: 1.05,
                         boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,

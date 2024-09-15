@@ -22,23 +22,23 @@ export const SmoothRoutingConfig = () => {
 
     return (
         <Suspense fallback={<Loader />}>
-            <div>
-                <div id="home">
+            <section>
+                <section id="home">
                     <Home />
-                </div>
-                <div id="about">
+                </section>
+                <section id="about">
                     <About />
-                </div>
-                <div id="experience">
+                </section>
+                <section id="experience">
                     <Experience />
-                </div>
-                <div id="project">
+                </section>
+                <section id="project">
                     <Projects />
-                </div>
-                <div id="contact">
+                </section>
+                <section id="contact">
                     <Contact />
-                </div>
-            </div>
+                </section>
+            </section>
         </Suspense>
     );
 };
