@@ -8,10 +8,10 @@
 ## Steps to Clone and Use
 
 ## 1. Clone the Repository:
-      git clone https://github.com/mehedihassandev/beta.portfolio.git
+      git clone https://github.com/mehedihassandev/project-alpha.git
       
 ## 2. Navigate to the Project Directory:
-      cd beta.portfolio
+      cd project-alpha
  
 ## Install Dependencies:
     npm install
@@ -22,7 +22,7 @@
 ## Start the Development Server:
     npm run dev
     # or
-    yarn dev
+    yarn run dev
 
     
 ## Open Your Browser:
