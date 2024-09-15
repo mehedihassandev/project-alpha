@@ -8,7 +8,7 @@ export const Experience = () => {
     <div className="w-full h-full grid grid-cols items-center px-10 lg:px-14 xl:px-14 overflow-auto">
       <div className="max-w-screen-2xl py-6 lg:py-10">
         <h1 className="text-3xl font-semibold text-white font-saira pb-5 pl-5 lg:pl-0">
-          <span className="text-secondary">02.1.</span> Experience
+          <span className="text-secondary">02.</span> Experience
         </h1>
 
         <div className="w-full pt-5">

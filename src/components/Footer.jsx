@@ -7,7 +7,7 @@ export const Footer = () => {
 
   return (
     <div>
-      <div className="pb-10">
+      <div className="pb-5">
         <h3 className="text-[#94A3B8] text-[16px] pt-4 font-syne">
           Based in:
         </h3>
@@ -15,7 +15,7 @@ export const Footer = () => {
           Dhaka, Bangladesh
         </p>
       </div>
-      <div className="flex gap-6 text-textColor pb-5">
+      <div className="flex gap-6 text-textColor">
         {socialLinks.map((link, index) => (
           <motion.h3
             key={index}
@@ -31,11 +31,11 @@ export const Footer = () => {
         ))}
       </div>
 
-      <div className="pt-2">
+      {/* <div className="pt-2">
         <h3 className="text-sm font-saira">
           © 2024 Md. Mehedi Hassan. All Rights Reserved
         </h3>
-      </div>
+      </div> */}
     </div>
   );
 };
