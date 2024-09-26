@@ -6,7 +6,6 @@ export const Header = () => {
       <h1 className="text-4xl font-saira font-semibold">Md. Mehedi Hassan</h1>
       <p className="text-lg font-syne">Junior Frontend Engineer</p>
 
-
       {/* <motion.p
         whileHover={{
           color: "#fff",

@@ -3,80 +3,78 @@
 @tailwind utilities;
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
-    width: 4px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #19e684;
-    border-radius: 3px;
+  background: #19e684;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #19e684;
+  background: #19e684;
 }
 
 .custom-text-stroke {
-    color: transparent;
-    -webkit-text-stroke: 1px #19e684;
-    position: relative;
-    overflow: hidden;
+  color: transparent;
+  -webkit-text-stroke: 1px #19e684;
+  position: relative;
+  overflow: hidden;
 }
 
 .box {
-    place-content: center;
-    text-shadow: 0 2px 0 #000;
+  place-content: center;
+  text-shadow: 0 2px 0 #000;
 
-    --border-angle: 0turn; /* For animation. */
-    --main-bg: conic-gradient(
-        from var(--border-angle),
-        #213,
-        #112 5%,
-        #112 60%,
-        #213 95%
-    );
+  --border-angle: 0turn; /* For animation. */
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #213,
+    #112 5%,
+    #112 60%,
+    #213 95%
+  );
 
-    border: solid 2px transparent;
-    --gradient-border: conic-gradient(
-        from var(--border-angle),
-        transparent 25%,
-        #53e7a0,
-        #19e684 99%,
-        transparent
-    );
+  border: solid 2px transparent;
+  --gradient-border: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    #53e7a0,
+    #19e684 99%,
+    transparent
+  );
 
-    background:
-        /* padding-box clips this background into the overall element except the border. */ var(
-                --main-bg
-            )
-            padding-box,
-        /* border-box extends this background to the border space */
-            var(--gradient-border) border-box,
-        /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
-            var(--main-bg) border-box;
+  background:
+        /* padding-box clips this background into the overall element except the border. */
+    var(--main-bg) padding-box,
+    /* border-box extends this background to the border space */
+      var(--gradient-border) border-box,
+    /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+      var(--main-bg) border-box;
 
-    background-position: center center;
+  background-position: center center;
 
-    animation: bg-spin 5s linear infinite;
+  animation: bg-spin 5s linear infinite;
 }
 
 @property --border-angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0turn;
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
 }
 
 @keyframes bg-spin {
-    to {
-        --border-angle: 1turn;
-    }
+  to {
+    --border-angle: 1turn;
+  }
 }

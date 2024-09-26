@@ -11,7 +11,7 @@ export const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [cursorTransition, setCursorTransition] = useState('');
+  const [cursorTransition, setCursorTransition] = useState("");
   const [isMoving, setIsMoving] = useState(false);
 
   useEffect(() => {
@@ -28,18 +28,52 @@ export const Layout = ({ children }) => {
     };
 
     const handleMouseOver = (e) => {
-      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
+      const tags = [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "P",
+        "A",
+        "BUTTON",
+        "SPAN",
+        "SVG",
+        "TIME",
+        "LI",
+        "LABEL",
+      ];
       if (tags.includes(e.target.tagName)) {
         setIsHovering(true);
-        setCursorTransition('transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out');
+        setCursorTransition(
+          "transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out",
+        );
       }
     };
 
     const handleMouseOut = (e) => {
-      const tags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'BUTTON', 'SPAN', 'SVG', 'TIME', 'LI', 'LABEL'];
+      const tags = [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6",
+        "P",
+        "A",
+        "BUTTON",
+        "SPAN",
+        "SVG",
+        "TIME",
+        "LI",
+        "LABEL",
+      ];
       if (tags.includes(e.target.tagName)) {
         setIsHovering(false);
-        setCursorTransition('transform 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out');
+        setCursorTransition(
+          "transform 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out",
+        );
       }
     };
 
@@ -72,8 +106,9 @@ export const Layout = ({ children }) => {
       </motion.button>
 
       <div
-        className={`bg-primary h-screen w-screen lg:w-[550px] xl:w-[550px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
-          } lg:left-0 border-r-2 border-secondary rounded-2xl`}
+        className={`bg-primary h-screen w-screen lg:w-[550px] xl:w-[550px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${
+          showSidebar ? "left-0 z-40 pr-10" : "-left-full"
+        } lg:left-0 border-r-2 border-secondary rounded-2xl`}
       >
         <div>
           <Header />
@@ -90,9 +125,7 @@ export const Layout = ({ children }) => {
           className="fixed w-[200px] h-[125px] lg:w-[350px] lg:h-[300px] top-1/2 left-1/3 lg:left-1/2 transform -translate-x-1/1 -translate-y-1/2 z-10 opacity-100"
           style={{ zIndex: 1 }}
         />
-        <div style={{ position: "relative", zIndex: 2 }}>
-          {children}
-        </div>
+        <div style={{ position: "relative", zIndex: 2 }}>{children}</div>
       </main>
 
       {/* Custom Cursor */}
