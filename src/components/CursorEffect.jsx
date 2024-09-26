@@ -1,6 +1,15 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-export const CursorEffect = ({ cursorPosition, width, height, zIndex, transition, transform, opacity, backgroundColor }) => {
+export const CursorEffect = ({
+  cursorPosition,
+  width,
+  height,
+  zIndex,
+  transition,
+  transform,
+  opacity,
+  backgroundColor,
+}) => {
   const { x, y } = cursorPosition;
 
   return (
@@ -22,7 +31,7 @@ export const CursorEffect = ({ cursorPosition, width, height, zIndex, transition
       }}
     />
   );
-}
+};
 
 CursorEffect.propTypes = {
   cursorPosition: PropTypes.shape({

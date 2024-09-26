@@ -30,54 +30,50 @@ export const Experience = () => {
                         </span>
                         | {exp.position}
                       </h3>
-                      {exp.description.map(
-                        (desc, index) => (
-                          <p
-                            key={index}
-                            className="mt-2 text-textColor text-lg leading-6 font-syne"
-                          >
-                            {desc}
-                          </p>
-                        )
-                      )}
-                      {exp.highlights.map(
-                        (highlight, index) => (
-                          <li
-                            key={index}
-                            className="pt-5 text-textColor text-lg leading-6 font-syne"
-                          >
-                            <span className="text-secondary font-semibold font-saira">
-                              {highlight.title}
-                            </span>
-                            {highlight.detail}
-                            {highlight.additionalDetail && highlight.additionalDetail.length > 0 && (
+                      {exp.description.map((desc, index) => (
+                        <p
+                          key={index}
+                          className="mt-2 text-textColor text-lg leading-6 font-syne"
+                        >
+                          {desc}
+                        </p>
+                      ))}
+                      {exp.highlights.map((highlight, index) => (
+                        <li
+                          key={index}
+                          className="pt-5 text-textColor text-lg leading-6 font-syne"
+                        >
+                          <span className="text-secondary font-semibold font-saira">
+                            {highlight.title}
+                          </span>
+                          {highlight.detail}
+                          {highlight.additionalDetail &&
+                            highlight.additionalDetail.length > 0 && (
                               <div className="text-textColor font-syne mt-1">
                                 {highlight.additionalDetail.map(
                                   (point, index) => (
                                     <p key={index} className="pt-2">
                                       {point}
                                     </p>
-                                  )
+                                  ),
                                 )}
                               </div>
                             )}
-
-                          </li>
-                        )
-                      )}
-                      <h3 className="mt-7 text-lg text-textColor font-saira font-semibold">Using Technology</h3>
+                        </li>
+                      ))}
+                      <h3 className="mt-7 text-lg text-textColor font-saira font-semibold">
+                        Using Technology
+                      </h3>
                       <div className="grid grid-cols-2 lg:grid-cols-7 pb-16 lg:pb-2 items-center gap-3 pt-7 lg:pt-5">
-                        {exp.skills.map(
-                          (skill, index) => (
-                            <h4
-                              key={index}
-                              className="text-md text-textColor items-center  flex cursor-pointer font-saira font-semibold"
-                            >
-                              <IoMdArrowDropright className="text-xl" />
-                              {skill}
-                            </h4>
-                          )
-                        )}
+                        {exp.skills.map((skill, index) => (
+                          <h4
+                            key={index}
+                            className="text-md text-textColor items-center  flex cursor-pointer font-saira font-semibold"
+                          >
+                            <IoMdArrowDropright className="text-xl" />
+                            {skill}
+                          </h4>
+                        ))}
                       </div>
                     </div>
                   ))}

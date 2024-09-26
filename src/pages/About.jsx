@@ -14,22 +14,34 @@ export const About = () => {
         <div className="text-textColor font-syne pb-4">
           <motion.p className="pb-4 text-lg text-textColor font-syne">
             Hello there! My name is
-            <span className="font-medium text-secondary"> Md. Mehedi Hassan</span>, and I have a deep passion for coding. My journey into web development began in 2019 when I took on the challenge of building a theme for Themeforest. My hard work paid off when my theme was accepted into their marketplace. Since then, I&apos;ve developed numerous themes for various businesses within the local economy, utilizing my skills in HTML, CSS, and JavaScript. This experience laid a solid foundation for my deep dive into JavaScript.
+            <span className="font-medium text-secondary">
+              {" "}
+              Md. Mehedi Hassan
+            </span>
+            , and I have a deep passion for coding. My journey into web
+            development began in 2019 when I took on the challenge of building a
+            theme for Themeforest. My hard work paid off when my theme was
+            accepted into their marketplace. Since then, I&apos;ve developed
+            numerous themes for various businesses within the local economy,
+            utilizing my skills in HTML, CSS, and JavaScript. This experience
+            laid a solid foundation for my deep dive into JavaScript.
           </motion.p>
 
           <motion.p className="pb-4 text-lg font-syne text-textColor">
             Time travel to the present, where I am employed by a startup company
-            as a <span className="font-medium text-secondary">React Developer</span>. I make
-            numerous contributions here, such as creating the
+            as a{" "}
+            <span className="font-medium text-secondary">React Developer</span>.
+            I make numerous contributions here, such as creating the
             <span className="font-medium text-secondary"> POS</span>,
             <span className="font-medium text-secondary"> PCM</span>, and
-            <span className="font-medium text-secondary"> E-Bill</span> system. These days,
-            creating inclusive and accessible digital experiences and goods for
-            a wide range of customers is my primary emphasis.
+            <span className="font-medium text-secondary"> E-Bill</span> system.
+            These days, creating inclusive and accessible digital experiences
+            and goods for a wide range of customers is my primary emphasis.
           </motion.p>
 
           <motion.p className="text-lg font-syne text-textColor pb-4">
-            I am committed, to lifelong learning and actively immerse myself in the rapidly evolving field of technology, eagerly picking up new
+            I am committed, to lifelong learning and actively immerse myself in
+            the rapidly evolving field of technology, eagerly picking up new
             techniques and frameworks. Accepting challenges, I enjoy learning
             new skills and developing my repertoire since I have an unquenchable
             curiosity to become proficient with cutting-edge tools and remain on
@@ -37,11 +49,26 @@ export const About = () => {
           </motion.p>
 
           <motion.p className="pb-4 text-lg font-syne text-textColor">
-            In addition to my work in React, I have also ventured into mobile development with <span className="font-medium text-secondary">React Native</span>. I played a key role in developing a <span className="font-medium text-secondary">MyCare app</span>, which enables users to perform essential tasks such as<span className="font-medium text-secondary"> top-up</span>,<span className="font-medium text-secondary"> bill payments</span> and <span className="font-medium text-secondary"> more</span>. This experience allowed me to extend my expertise beyond web development, embracing the unique challenges and opportunities presented by mobile app development.
+            In addition to my work in React, I have also ventured into mobile
+            development with{" "}
+            <span className="font-medium text-secondary">React Native</span>. I
+            played a key role in developing a{" "}
+            <span className="font-medium text-secondary">MyCare app</span>,
+            which enables users to perform essential tasks such as
+            <span className="font-medium text-secondary"> top-up</span>,
+            <span className="font-medium text-secondary"> bill payments</span>{" "}
+            and <span className="font-medium text-secondary"> more</span>. This
+            experience allowed me to extend my expertise beyond web development,
+            embracing the unique challenges and opportunities presented by
+            mobile app development.
           </motion.p>
 
           <motion.p className="pb-4 text-lg font-syne text-textColor">
-            Beyond my technical skills, I bring a strong sense of adaptability and a proactive mindset, allowing me to excel in various roles and industries. Whether working independently or as part of a team, I am always eager to push the boundaries of what&apos;s possible in the world of web and mobile development.
+            Beyond my technical skills, I bring a strong sense of adaptability
+            and a proactive mindset, allowing me to excel in various roles and
+            industries. Whether working independently or as part of a team, I am
+            always eager to push the boundaries of what&apos;s possible in the
+            world of web and mobile development.
           </motion.p>
         </div>
         <motion.h2 className="text-textColor font-syne py-4 text-xl">

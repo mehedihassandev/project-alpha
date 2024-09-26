@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Fragment } from "react";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config";
-import data from '../../data.json';
+import data from "../../data.json";
 import { IoMdArrowDropright } from "react-icons/io";
 
 export const Projects = () => {
@@ -46,7 +46,9 @@ export const Projects = () => {
               <p className="text-textColor text-lg leading-6 font-syne pb-3">
                 {item.description}
               </p>
-              <h3 className="mt-3 text-lg text-textColor font-saira font-medium">Using Technology</h3>
+              <h3 className="mt-3 text-lg text-textColor font-saira font-medium">
+                Using Technology
+              </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-1 pt-3">
                 {item.technologies.map((tech, techIndex) => (
                   <h2
@@ -69,13 +71,17 @@ export const Projects = () => {
                     <motion.button
                       key={linkIndex}
                       className={`w-24 h-8 text-sm text-primary bg-secondary rounded-full items-center justify-center flex cursor-pointer font-saira font-medium disabled:bg-gray-400`}
-                      whileHover={link.url ? {
-                        scale: 1.05,
-                        boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
-                      } : {}}
+                      whileHover={
+                        link.url
+                          ? {
+                              scale: 1.05,
+                              boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
+                            }
+                          : {}
+                      }
                       onClick={() => {
                         if (link.url) {
-                          window.open(link.url, '_blank', 'noreferrer');
+                          window.open(link.url, "_blank", "noreferrer");
                         }
                       }}
                       disabled={!link.url}

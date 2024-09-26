@@ -9,38 +9,38 @@ const Projects = lazy(() => import("../pages/Projects"));
 const Experience = lazy(() => import("../pages/Experience"));
 
 export const SmoothRoutingConfig = () => {
-    const location = useLocation();
+  const location = useLocation();
 
-    useEffect(() => {
-        const sectionId =
-            location.pathname === "/" ? "home" : location.pathname.substring(1);
-        const sectionElement = document.getElementById(sectionId);
-        if (sectionElement) {
-            sectionElement.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [location]);
+  useEffect(() => {
+    const sectionId =
+      location.pathname === "/" ? "home" : location.pathname.substring(1);
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
-    return (
-        <Suspense fallback={<Loader />}>
-            <section>
-                <section id="home">
-                    <Home />
-                </section>
-                <section id="about">
-                    <About />
-                </section>
-                <section id="experience">
-                    <Experience />
-                </section>
-                <section id="project">
-                    <Projects />
-                </section>
-                <section id="contact">
-                    <Contact />
-                </section>
-            </section>
-        </Suspense>
-    );
+  return (
+    <Suspense fallback={<Loader />}>
+      <section>
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="project">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </section>
+    </Suspense>
+  );
 };
 
 export default SmoothRoutingConfig;
