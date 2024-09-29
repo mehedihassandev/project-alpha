@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { IoMdArrowDropright } from "react-icons/io";
-import data from "../../data.json";
+import { skills } from "../app/constant/skills";
 
 export const About = () => {
-  const { skills } = data;
 
   return (
     <div className="max-w-screen-2xl h-full grid items-center justify-between px-14 py-10">

@@ -1,8 +1,7 @@
 import { iconHash } from "../../utils/icon/icons";
-import data from "../../data.json";
+import { contacts } from "../app/constant/contacts";
 
 export const Contact = () => {
-  const { contacts } = data;
 
   const handleMailToClick = (e) => {
     e.preventDefault();
