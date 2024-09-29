@@ -21,7 +21,7 @@ export const Home = () => {
           </h1>
           <div className="block lg:hidden mt-8">
             <img
-              src="../assets/me.jpg"
+              src="https://i.ibb.co.com/GspdVzQ/IMG-20231130-WA0007-2-1.jpg"
               alt="about"
               className="w-[450px] h-auto overflow-hidden "
               onError={(e) => {
@@ -61,7 +61,7 @@ export const Home = () => {
         </div>
         <div className="hidden xl:block">
           <motion.img
-            src="../assets/me.jpg"
+            src="https://i.ibb.co.com/GspdVzQ/IMG-20231130-WA0007-2-1.jpg"
             alt="about"
             className="w-full h-[600px] overflow-hidden object-cover"
             style={{ filter: "grayscale(100%)" }}
