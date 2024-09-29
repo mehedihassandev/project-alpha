@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Fragment } from "react";
 import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
 import { IoMdArrowDropright } from "react-icons/io";
-import { projects } from "../app/constant/projects";
+import tailwindConfig from "../../../tailwind.config";
+import { projects } from "../constant/projects";
 
 export const Projects = () => {
   const theme = resolveConfig(tailwindConfig);

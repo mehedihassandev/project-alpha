@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { IoMdArrowDropright } from "react-icons/io";
-import { skills } from "../app/constant/skills";
+import { skills } from "../constant/skills";
 
 export const About = () => {
 

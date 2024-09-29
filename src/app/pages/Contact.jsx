@@ -1,5 +1,5 @@
-import { iconHash } from "../../utils/icon/icons";
-import { contacts } from "../app/constant/contacts";
+import { iconHash } from "../../../utils/icon/icons";
+import { contacts } from "../constant/contacts";
 
 export const Contact = () => {
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
+import tailwindConfig from "../../../tailwind.config";
 
 export const Home = () => {
   const theme = resolveConfig(tailwindConfig);

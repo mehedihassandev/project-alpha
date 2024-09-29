@@ -1,12 +1,12 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Loader } from '../../components/Loader';
-import { Contact } from '../../pages/Contact';
 
-const Home = lazy(() => import('../../pages/Home'));
-const About = lazy(() => import('../../pages/About'));
-const Projects = lazy(() => import('../../pages/Projects'));
-const Experience = lazy(() => import('../../pages/Experience'));
+const Home = lazy(() => import('../pages/Home'));
+const About = lazy(() => import('../pages/About'));
+const Projects = lazy(() => import('../pages/Projects'));
+const Experience = lazy(() => import('../pages/Experience'));
+const Contact = lazy(() => import('../pages/Contact'));
 
 export const SmoothRoutingConfig = () => {
   const location = useLocation();

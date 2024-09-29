@@ -1,5 +1,5 @@
 import { IoMdArrowDropright } from "react-icons/io";
-import { experience } from "../app/constant/experience";
+import { experience } from "../constant/experience";
 
 export const Experience = () => {
 
