@@ -1,8 +1,8 @@
 import { iconHash } from "../../../utils/icon/icons";
+import ContactForm from "../components/ContactForm";
 import { contacts } from "../constant/contacts";
 
 export const Contact = () => {
-
   const handleMailToClick = (e) => {
     e.preventDefault();
     window.open(
@@ -42,44 +42,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="box rounded-xl">
-        <div className=" w-full px-8 py-5 pb-10 mx-auto overflow-hidden bg-primary rounded-xl">
-          <form className="mt-4 w-full">
-            <div className="flex-1">
-              <label className="block mb-2 text-md text-textColor font-saira">
-                Full Name
-              </label>
-              <input
-                type="text"
-                placeholder="John Doe"
-                className="block w-full px-5 py-3 mt-2 text-gray-700 border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring font-syne"
-              />
-            </div>
-            <div className="flex-1 mt-6">
-              <label className="block mb-2 text-md text-textColor font-saira">
-                Email address
-              </label>
-              <input
-                type="email"
-                placeholder="johndoe@example.com"
-                className="block w-full px-5 py-3 mt-2 text-gray-700 border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring font-syne"
-              />
-            </div>
-            <div className="w-full mt-6">
-              <label className="block mb-2 text-md text-textColor font-saira">
-                Message
-              </label>
-              <textarea
-                className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400  border border-secondary rounded-md md:h-48 bg-gray-900 focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring font-syne"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <button className="w-full px-6 py-3 mt-6 text-md font-medium tracking-wide text-black capitalize transition-colors duration-300 transform bg-secondary rounded-md hover:bg-primary hover:text-white focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50 font-saira">
-              get in touch
-            </button>
-          </form>
-        </div>
-      </div>
+      <ContactForm />
     </section>
   );
 };
