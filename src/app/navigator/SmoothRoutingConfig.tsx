@@ -4,7 +4,7 @@ import { Loader } from '../../components/Loader';
 import { Contact } from '../../pages/Contact';
 
 const Home = lazy(() => import('../../pages/Home'));
-const About = lazy(() => import('../pages/About'));
+const About = lazy(() => import('../../pages/About'));
 const Projects = lazy(() => import('../../pages/Projects'));
 const Experience = lazy(() => import('../../pages/Experience'));
 

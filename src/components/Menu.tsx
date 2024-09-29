@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { menus } from "../navigator/menu";
-import { motion } from "framer-motion";
-import { iconHash } from "../../utils/icon/icons";
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { menus } from '../app/navigator/menu';
+import { motion } from 'framer-motion';
+import { iconHash } from '../../utils/icon/icons';
 
 export const Menu = ({ setShowSidebar }) => {
   const location = useLocation();
@@ -15,7 +15,7 @@ export const Menu = ({ setShowSidebar }) => {
           key={index}
           className={({ isActive }) =>
             `flex items-center py-[10px] px-[10px] gap-[15px] transition-all duration-500 ${
-              isActive ? "text-secondary font-semibold" : "text-textColor"
+              isActive ? 'text-secondary font-semibold' : 'text-textColor'
             }`
           }
           onClick={() => setShowSidebar(false)}
@@ -27,13 +27,13 @@ export const Menu = ({ setShowSidebar }) => {
                 className="text-[1rem] font-saira"
                 whileHover={{
                   scale: 1.05,
-                  transform: "translateX(10px)",
-                  transition: { duration: 0.2 },
+                  transform: 'translateX(10px)',
+                  transition: { duration: 0.2 }
                 }}
                 animate={
                   isActive
                     ? {
-                        transform: "translateX(10px)",
+                        transform: 'translateX(10px)'
                       }
                     : {}
                 }
