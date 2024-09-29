@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Loader } from '../../components/Loader';
+import { Loader } from '../components/Loader';
 
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));

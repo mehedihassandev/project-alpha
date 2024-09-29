@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { MdMenu, MdClose } from "react-icons/md";
-import { Footer } from "./Footer";
+import { CursorEffect } from "../components/CursorEffect";
 import { Header } from "./Header";
 import { Menu } from "./Menu";
-import { CursorEffect } from "./CursorEffect";
+import { Footer } from "./Footer";
 
 export const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -106,9 +106,8 @@ export const Layout = ({ children }) => {
       </motion.button>
 
       <div
-        className={`bg-primary h-screen w-screen lg:w-[550px] xl:w-[550px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${
-          showSidebar ? "left-0 z-40 pr-10" : "-left-full"
-        } lg:left-0 border-r-2 border-secondary rounded-2xl`}
+        className={`bg-primary h-screen w-screen lg:w-[550px] xl:w-[550px] pl-10 flex flex-col justify-around transition-all duration-300 fixed lg:static ${showSidebar ? "left-0 z-40 pr-10" : "-left-full"
+          } lg:left-0 border-r-2 border-secondary rounded-2xl`}
       >
         <div>
           <Header />
