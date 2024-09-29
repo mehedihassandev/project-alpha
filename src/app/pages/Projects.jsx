@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import { Fragment } from "react";
 import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
-import data from "../../data.json";
 import { IoMdArrowDropright } from "react-icons/io";
+import tailwindConfig from "../../../tailwind.config";
+import { projects } from "../constant/projects";
 
 export const Projects = () => {
   const theme = resolveConfig(tailwindConfig);
-  const { projects } = data;
 
   return (
     <div className="flex flex-col w-full h-full overflow-hidden px-5 py-10 lg:px-14">
@@ -74,9 +73,9 @@ export const Projects = () => {
                       whileHover={
                         link.url
                           ? {
-                              scale: 1.05,
-                              boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
-                            }
+                            scale: 1.05,
+                            boxShadow: `0px 0px 10px ${theme.theme.colors.buttonColor}`,
+                          }
                           : {}
                       }
                       onClick={() => {

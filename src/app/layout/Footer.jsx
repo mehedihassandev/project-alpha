@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import data from "../../data.json";
-import { iconHash } from "../../utils/icon/icons";
+import { socialLinks } from "../constant/socialLinks";
+import { iconHash } from "../../../utils/icon/icons";
 
 export const Footer = () => {
-  const { socialLinks } = data;
 
   return (
     <div>

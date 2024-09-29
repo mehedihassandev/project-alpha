@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-// import { RouterConfig } from "./navigator/RouterConfig"
-import { Layout } from "./components/Layout";
-import { SmoothRoutingConfig } from "./navigator/SmoothRoutingConfig";
+import { Layout } from "./app/layout";
+import { SmoothRoutingConfig } from "./app/navigator/SmoothRoutingConfig";
 
 export const App = () => {
   return (
