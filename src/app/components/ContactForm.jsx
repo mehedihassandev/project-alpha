@@ -61,7 +61,7 @@ export const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="John Doe"
-              className="block w-full px-5 py-3 mt-2 text-gray-700 border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
+              className="block w-full px-5 py-3 mt-2 text-white border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
             />
           </div>
           <div className="flex-1 mt-6">
@@ -74,7 +74,7 @@ export const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="johndoe@example.com"
-              className="block w-full px-5 py-3 mt-2 text-gray-700 border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
+              className="block w-full px-5 py-3 mt-2 text-white border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
             />
           </div>
           <div className="w-full mt-6">
@@ -82,7 +82,7 @@ export const ContactForm = () => {
               Message
             </label>
             <textarea
-              className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 border border-secondary rounded-md md:h-48 bg-gray-900 focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
+              className="block w-full h-32 px-5 py-3 mt-2 text-white placeholder-gray-400 border border-secondary rounded-md md:h-48 bg-gray-900 focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
               placeholder="Message"
               name="message"
               value={formData.message}
