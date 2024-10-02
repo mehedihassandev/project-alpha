@@ -32,7 +32,12 @@ export default [
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
-      ]
+      ],
+      // Add the following rule to catch syntax errors
+      'no-undef': 'error',
+      'no-unused-vars': 'warn',
+      'no-extra-semi': 'error',
+      'no-unexpected-multiline': 'error'
     }
   }
 ];
