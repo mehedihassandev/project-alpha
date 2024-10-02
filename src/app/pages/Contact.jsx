@@ -1,6 +1,6 @@
-import { iconHash } from "../../../utils/icon/icons";
-import ContactForm from "../components/ContactForm";
+import { iconHash } from "@utils/icon/icons";
 import { contacts } from "../constant/contacts";
+import { ContactForm } from "../components/ContactForm";
 
 export const Contact = () => {
   const handleMailToClick = (e) => {

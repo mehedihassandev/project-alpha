@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { MdMenu, MdClose } from "react-icons/md";
-import { CursorEffect } from "../components/CursorEffect";
 import { Header } from "./Header";
 import { Menu } from "./Menu";
 import { Footer } from "./Footer";
+import { CursorEffect } from "../components/CursorEffect";
 
 export const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false);

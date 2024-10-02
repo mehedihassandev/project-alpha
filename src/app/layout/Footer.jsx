@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import { iconHash } from "@utils/icon/icons";
 import { socialLinks } from "../constant/socialLinks";
-import { iconHash } from "../../../utils/icon/icons";
 
 export const Footer = () => {
 

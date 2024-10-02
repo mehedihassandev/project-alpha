@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { iconHash } from '../../../utils/icon/icons';
 import { menus } from '../navigator/menu';
-
+import { iconHash } from '@utils/icon/icons';
 export const Menu = ({ setShowSidebar }) => {
   const location = useLocation();
 

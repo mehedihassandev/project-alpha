@@ -1,7 +1,7 @@
-import React from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
-export class ErrorBoundary extends React.Component {
+export class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false, errorMessage: "", errorInfo: null, errorStack: "", errorLocation: "" };

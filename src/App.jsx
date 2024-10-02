@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { useWindowSize } from "./app/components/UseWindowSize";
 import { Layout } from "./app/layout";
 import { SmoothRoutingConfig } from "./app/navigator/SmoothRoutingConfig";
 import { RouterConfig } from "./app/navigator/RouterConfig";
-import { useWindowSize } from "./app/components/UseWindowSize";
 
 export const App = () => {
   const size = useWindowSize();
