@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Loader from '../components/Loader';
+import { Loader } from '../components/Loader';
 import { ROUTES } from './route-constant';
 
 export const RouterConfig = () => {
@@ -9,6 +9,7 @@ export const RouterConfig = () => {
   const Projects = lazy(() => import('../pages/Projects'));
   const Experience = lazy(() => import('../pages/Experience'));
   const Contact = lazy(() => import('../pages/Contact'));
+  const NotFound = lazy(() => import('../components/404'));
 
   return (
     <Suspense fallback={<Loader />}>
@@ -18,6 +19,7 @@ export const RouterConfig = () => {
         <Route path={ROUTES.EXPERIENCE} element={<Experience />} />
         <Route path={ROUTES.PROJECT} element={<Projects />} />
         <Route path={ROUTES.CONTACT} element={<Contact />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );
