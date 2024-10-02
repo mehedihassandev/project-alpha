@@ -17,7 +17,24 @@ export default [
         sourceType: 'module'
       }
     },
-    settings: { react: { version: '18.3' } },
+    settings: {
+      react: { version: '18.3' },
+      'import/resolver': {
+        alias: {
+          map: [
+            ['@', './src'],
+            ['@components', './src/app/components'],
+            ['@pages', './src/app/pages'],
+            ['@layout', './src/app/layout'],
+            ['@navigator', './src/app/navigator'],
+            ['@constant', './src/app/constant'],
+            ['@assets', './assets'],
+            ['@utils', './utils']
+          ],
+          extensions: ['.js', '.jsx']
+        }
+      }
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,
@@ -32,6 +49,59 @@ export default [
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
+      ],
+      // Add the following rule to catch syntax errors
+      'no-undef': 'error',
+      'no-unused-vars': 'warn',
+      'no-extra-semi': 'error',
+      'no-unexpected-multiline': 'error',
+      // Enforce named imports for all path aliases
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: '@',
+              importNames: ['default'],
+              message: 'Use named imports for @'
+            },
+            {
+              name: '@components',
+              importNames: ['default'],
+              message: 'Use named imports for @components'
+            },
+            {
+              name: '@pages',
+              importNames: ['default'],
+              message: 'Use named imports for @pages'
+            },
+            {
+              name: '@layout',
+              importNames: ['default'],
+              message: 'Use named imports for @layout'
+            },
+            {
+              name: '@navigator',
+              importNames: ['default'],
+              message: 'Use named imports for @navigator'
+            },
+            {
+              name: '@constant',
+              importNames: ['default'],
+              message: 'Use named imports for @constant'
+            },
+            {
+              name: '@assets',
+              importNames: ['default'],
+              message: 'Use named imports for @assets'
+            },
+            {
+              name: '@utils',
+              importNames: ['default'],
+              message: 'Use named imports for @utils'
+            }
+          ]
+        }
       ]
     }
   }

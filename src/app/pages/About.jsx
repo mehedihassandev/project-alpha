@@ -5,7 +5,7 @@ import { skills } from "../constant/skills";
 export const About = () => {
 
   return (
-    <div className="max-w-screen-2xl h-full grid items-center justify-between px-14 py-10">
+    <div className="max-w-screen-2xl h-full lg:h-screen grid items-center justify-between px-14 py-10">
       <div className="pt-10">
         <h1 className="text-3xl font-semibold text-white font-saira pb-5">
           <span className="font-medium text-secondary">01.</span> About Me
