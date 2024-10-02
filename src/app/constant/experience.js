@@ -2,7 +2,7 @@ export const experience = [
   {
     id: 1,
     date: 'June 2023 - Present',
-    title: 'Hubar Tech Ltd ',
+    title: 'Hubar Tech Ltd. ',
     position: 'Junior Frontend Developer',
     description: [
       'Hubar Tech is a software development company that specializes in Telecoms Software. It is a sister company of UK-based Exos Systems Ltd.',

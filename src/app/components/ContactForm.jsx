@@ -24,7 +24,7 @@ export const ContactForm = () => {
     const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 
     const templateParams = {
-      name: formData.firstName,
+      name: formData.name,
       email: formData.email,
       message: formData.message,
     };
