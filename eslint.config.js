@@ -29,7 +29,8 @@ export default [
             ['@navigator', './src/app/navigator'],
             ['@constant', './src/app/constant'],
             ['@assets', './assets'],
-            ['@utils', './utils']
+            ['@utils', './utils'],
+            ['@hooks', './utils/hooks']
           ],
           extensions: ['.js', '.jsx']
         }
@@ -99,6 +100,11 @@ export default [
               name: '@utils',
               importNames: ['default'],
               message: 'Use named imports for @utils'
+            },
+            {
+              name: '@hooks',
+              importNames: ['default'],
+              message: 'Use named imports for @hooks'
             }
           ]
         }

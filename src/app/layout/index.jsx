@@ -1,92 +1,30 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
 import { MdMenu, MdClose } from "react-icons/md";
 import { Header } from "./Header";
 import { Menu } from "./Menu";
 import { Footer } from "./Footer";
 import { CursorEffect } from "../components/CursorEffect";
+import { useCursorEffect } from "../../../utils/hooks/cursor-effect-hook";
+import { useNotification } from "@utils/hooks/notification-hook";
 
 export const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-  const [cursorTransition, setCursorTransition] = useState("");
-  const [isMoving, setIsMoving] = useState(false);
+  const { cursorPosition, isHovering, cursorTransition, isMoving } = useCursorEffect();
+  const notify = useNotification();
 
   useEffect(() => {
-    let mouseTimeout;
-
-    const handleMouseMove = (e) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-      setIsMoving(true);
-
-      clearTimeout(mouseTimeout);
-      mouseTimeout = setTimeout(() => {
-        setIsMoving(false);
-      }, 100);
+    const handleOffline = () => {
+      notify("You are offline.", false);
     };
 
-    const handleMouseOver = (e) => {
-      const tags = [
-        "H1",
-        "H2",
-        "H3",
-        "H4",
-        "H5",
-        "H6",
-        "P",
-        "A",
-        "BUTTON",
-        "SPAN",
-        "SVG",
-        "TIME",
-        "LI",
-        "LABEL",
-      ];
-      if (tags.includes(e.target.tagName)) {
-        setIsHovering(true);
-        setCursorTransition(
-          "transform 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out",
-        );
-      }
-    };
-
-    const handleMouseOut = (e) => {
-      const tags = [
-        "H1",
-        "H2",
-        "H3",
-        "H4",
-        "H5",
-        "H6",
-        "P",
-        "A",
-        "BUTTON",
-        "SPAN",
-        "SVG",
-        "TIME",
-        "LI",
-        "LABEL",
-      ];
-      if (tags.includes(e.target.tagName)) {
-        setIsHovering(false);
-        setCursorTransition(
-          "transform 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out",
-        );
-      }
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseover", handleMouseOver);
-    document.addEventListener("mouseout", handleMouseOut);
+    window.addEventListener("offline", handleOffline);
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseover", handleMouseOver);
-      document.removeEventListener("mouseout", handleMouseOut);
+      window.removeEventListener("offline", handleOffline);
     };
-  }, []);
+  }, [notify]);
 
   return (
     <div className="relative flex bg-primary text-white">

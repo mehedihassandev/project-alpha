@@ -1,9 +1,9 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export const Loader = () => {
   return (
-    <div className="fixed bg-transparent h-screen top-0 left-0 w-full flex justify-center items-center z-10">
+    <div className="fixed bg-black opacity-75 h-screen top-0 left-0 w-full flex justify-center items-center z-10">
       <div className="p-4 rounded-md">
         <div className="flex justify-center">
           <>
@@ -12,7 +12,7 @@ export const Loader = () => {
               animate={{
                 y: [0, -20, 0],
                 opacity: [1, 0], // Fades out
-                transition: { duration: 1, repeat: Infinity },
+                transition: { duration: 1, repeat: Infinity }
               }}
             />
             <motion.span
@@ -23,8 +23,8 @@ export const Loader = () => {
                 transition: {
                   duration: 1,
                   repeat: Infinity,
-                  delay: 0.2,
-                },
+                  delay: 0.2
+                }
               }}
             />
             <motion.span
@@ -35,8 +35,8 @@ export const Loader = () => {
                 transition: {
                   duration: 1,
                   repeat: Infinity,
-                  delay: 0.4,
-                },
+                  delay: 0.4
+                }
               }}
             />
           </>
