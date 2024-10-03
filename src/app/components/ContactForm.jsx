@@ -74,7 +74,7 @@ export const ContactForm = () => {
               className="block w-full px-5 py-3 mt-2 text-white border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
             />
             {formik.touched.name && formik.errors.name ? (
-              <div className="text-red-500">{formik.errors.name}</div>
+              <div className="text-red-500 pt-2 pl-2">{formik.errors.name}</div>
             ) : null}
           </div>
           <div className="flex-1 mt-6">
@@ -91,7 +91,7 @@ export const ContactForm = () => {
               className="block w-full px-5 py-3 mt-2 text-white border rounded-md bg-gray-900 border-secondary focus:border-secondary focus:ring-secondary focus:ring-opacity-40 focus:outline-none focus:ring font-syne"
             />
             {formik.touched.email && formik.errors.email ? (
-              <div className="text-red-500">{formik.errors.email}</div>
+              <div className="text-red-500 pt-2 pl-2">{formik.errors.email}</div>
             ) : null}
           </div>
           <div className="w-full mt-6">
@@ -107,12 +107,15 @@ export const ContactForm = () => {
               onBlur={formik.handleBlur}
             ></textarea>
             {formik.touched.message && formik.errors.message ? (
-              <div className="text-red-500">{formik.errors.message}</div>
+              <div className="text-red-500 pt-2 pl-2">{formik.errors.message}</div>
             ) : null}
           </div>
           <button
             type="submit"
-            className="w-full px-6 py-3 mt-6 text-md font-medium tracking-wide text-black capitalize transition-colors duration-300 transform bg-secondary rounded-md hover:bg-primary hover:text-white focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50 font-saira"
+            className={`w-full px-6 py-3 mt-6 text-md font-medium tracking-wide capitalize transition-colors duration-300 transform rounded-md focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50 font-saira ${!formik.isValid
+              ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+              : "bg-secondary text-black hover:bg-opacity-75 hover:text-white"
+              }`}
             disabled={!formik.isValid || loading}
           >
             {loading ? "Sending..." : "Get in touch"}
