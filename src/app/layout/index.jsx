@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
 import { MdMenu, MdClose } from "react-icons/md";
@@ -7,10 +7,24 @@ import { Menu } from "./Menu";
 import { Footer } from "./Footer";
 import { CursorEffect } from "../components/CursorEffect";
 import { useCursorEffect } from "../../../utils/hooks/cursor-effect-hook";
+import { useNotification } from "@utils/hooks/notification-hook";
 
 export const Layout = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const { cursorPosition, isHovering, cursorTransition, isMoving } = useCursorEffect();
+  const notify = useNotification();
+
+  useEffect(() => {
+    const handleOffline = () => {
+      notify("You are offline.", false);
+    };
+
+    window.addEventListener("offline", handleOffline);
+
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, [notify]);
 
   return (
     <div className="relative flex bg-primary text-white">
