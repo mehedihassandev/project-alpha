@@ -68,7 +68,7 @@ body {
 }
 
 @property --border-angle {
-  syntax: "<angle>";
+  syntax: '<angle>';
   inherits: true;
   initial-value: 0turn;
 }
@@ -76,5 +76,24 @@ body {
 @keyframes bg-spin {
   to {
     --border-angle: 1turn;
+  }
+}
+
+.welcome {
+  stroke: #19e684;
+  stroke-width: 3;
+  fill: transparent;
+  animation: textAnimate 5s infinite alternate;
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
   }
 }
