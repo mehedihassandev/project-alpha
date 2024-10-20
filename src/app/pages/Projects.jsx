@@ -27,8 +27,8 @@ export const Projects = () => {
                   src={item.imgSrc}
                   alt="about"
                   className="w-full h-full lg:h-80 box"
-                  style={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
-                  animate={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
+                  style={{ filter: isLoading ? "blur(10px)" : "grayscale(50%)" }}
+                  animate={{ filter: isLoading ? "blur(10px)" : "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
@@ -102,8 +102,8 @@ export const Projects = () => {
                   src={item.imgSrc}
                   alt="about"
                   className={`w-full h-full lg:h-80 box ${isLoading ? 'blur-2xl opacity-30' : 'opacity-100'}`}
-                  style={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
-                  animate={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
+                  style={{ filter: isLoading ? "blur(10px)" : "grayscale(50%)" }}
+                  animate={{ filter: isLoading ? "blur(10px)" : "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,

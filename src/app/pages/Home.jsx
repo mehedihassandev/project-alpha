@@ -33,8 +33,8 @@ export const Home = () => {
               onLoad={() => {
                 setIsLoading(false)
               }}
-              style={{ filter: isLoading ? "blur(20px)" : "" }}
-              animate={{ filter: isLoading ? "blur(20px)" : "" }}
+              style={{ filter: isLoading ? "blur(10px)" : "" }}
+              animate={{ filter: isLoading ? "blur(10px)" : "" }}
             />
           </div>
           <p className="text-md lg:text-lg leading-6 mt-8 lg:mt-0 text-textColor font-syne w-[95%]">
@@ -70,8 +70,8 @@ export const Home = () => {
             src="https://i.ibb.co.com/GspdVzQ/IMG-20231130-WA0007-2-1.jpg"
             alt="about"
             className={`w-full h-[600px] overflow-hidden object-cover ${isLoading ? 'blur-2xl opacity-30' : 'opacity-100'}`}
-            style={{ filter: isLoading ? "blur(20px)" : "grayscale(100%)" }}
-            animate={{ filter: isLoading ? "blur(20px)" : "grayscale(100%)" }}
+            style={{ filter: isLoading ? "blur(10px)" : "grayscale(100%)" }}
+            animate={{ filter: isLoading ? "blur(10px)" : "grayscale(100%)" }}
             whileHover={{
               filter: "contrast(130%)",
               transform: "translateY(-10px) translateX(-10px)",
