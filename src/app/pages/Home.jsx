@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../../tailwind.config";
+import { useState } from "react";
 
 export const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const theme = resolveConfig(tailwindConfig);
 
   return (
     <section id="home">
       <div className="w-full h-full lg:h-screen items-center px-7 lg:px-10 overflow-hidden grid grid-cols-3 gap-2 align-middle">
-        <div className="col-span-6 xl:col-span-2 py-8 lg:py-24 mt-2 lg:mt-32 xl:mt-0 px-5">
+        <div className="col-span-6 xl:col-span-2 lg:py-8 lg:py-24 mt-2 lg:mt-32 xl:mt-0 px-5">
           <div className="h-full">
             <svg width="100%" height="100%">
               <text x="50%" y="60%" textAnchor="middle" className="font-poppins tracking-[10px] text-5xl lg:text-[100px] font-bold welcome">
@@ -18,7 +20,7 @@ export const Home = () => {
           </div>
 
           <div className="block lg:hidden">
-            <img
+            <motion.img
               src="https://i.ibb.co.com/GspdVzQ/IMG-20231130-WA0007-2-1.jpg"
               alt="about"
               className="w-[450px] h-auto overflow-hidden "
@@ -27,6 +29,12 @@ export const Home = () => {
                 e.target.src =
                   "https://i.ibb.co.com/GspdVzQ/IMG-20231130-WA0007-2-1.jpg";
               }}
+              loading="lazy"
+              onLoad={() => {
+                setIsLoading(false)
+              }}
+              style={{ filter: isLoading ? "blur(20px)" : "" }}
+              animate={{ filter: isLoading ? "blur(20px)" : "" }}
             />
           </div>
           <p className="text-md lg:text-lg leading-6 mt-8 lg:mt-0 text-textColor font-syne w-[95%]">
@@ -61,9 +69,9 @@ export const Home = () => {
           <motion.img
             src="https://i.ibb.co.com/GspdVzQ/IMG-20231130-WA0007-2-1.jpg"
             alt="about"
-            className="w-full h-[600px] overflow-hidden object-cover"
-            style={{ filter: "grayscale(100%)" }}
-            animate={{ filter: "grayscale(100%)" }}
+            className={`w-full h-[600px] overflow-hidden object-cover ${isLoading ? 'blur-2xl opacity-30' : 'opacity-100'}`}
+            style={{ filter: isLoading ? "blur(20px)" : "grayscale(100%)" }}
+            animate={{ filter: isLoading ? "blur(20px)" : "grayscale(100%)" }}
             whileHover={{
               filter: "contrast(130%)",
               transform: "translateY(-10px) translateX(-10px)",
@@ -73,6 +81,10 @@ export const Home = () => {
               e.target.onerror = null;
               e.target.src =
                 "https://i.ibb.co.com/GspdVzQ/IMG-20231130-WA0007-2-1.jpg";
+            }}
+            loading="lazy"
+            onLoad={() => {
+              setIsLoading(false)
             }}
           />
         </div>

@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import resolveConfig from "tailwindcss/resolveConfig";
 import { IoMdArrowDropright } from "react-icons/io";
 import tailwindConfig from "../../../tailwind.config";
 import { projects } from "../constant/projects";
 
 export const Projects = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   const theme = resolveConfig(tailwindConfig);
 
   return (
@@ -24,9 +26,9 @@ export const Projects = () => {
                 <motion.img
                   src={item.imgSrc}
                   alt="about"
-                  className="w-full h-auto box"
-                  style={{ filter: "grayscale(50%)" }}
-                  animate={{ filter: "grayscale(50%)" }}
+                  className="w-full h-full lg:h-80 box"
+                  style={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
+                  animate={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
@@ -34,6 +36,9 @@ export const Projects = () => {
                   onError={(e) => {
                     (e.target.onerror = null),
                       (e.target.src = item.errorImgSrc);
+                  }}
+                  onLoad={() => {
+                    setIsLoading(false)
                   }}
                 />
               </div>
@@ -96,9 +101,9 @@ export const Projects = () => {
                 <motion.img
                   src={item.imgSrc}
                   alt="about"
-                  className="w-full h-auto box"
-                  style={{ filter: "grayscale(50%)" }}
-                  animate={{ filter: "grayscale(50%)" }}
+                  className={`w-full h-full lg:h-80 box ${isLoading ? 'blur-2xl opacity-30' : 'opacity-100'}`}
+                  style={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
+                  animate={{ filter: isLoading ? "blur(20px)" : "grayscale(50%)" }}
                   whileHover={{
                     filter: "contrast(130%)",
                     boxShadow: `10px 10px 0px 0px ${theme.theme.colors.secondary}`,
@@ -107,6 +112,9 @@ export const Projects = () => {
                   onError={(e) => {
                     (e.target.onerror = null),
                       (e.target.src = item.errorImgSrc);
+                  }}
+                  onLoad={() => {
+                    setIsLoading(false)
                   }}
                 />
               </div>
